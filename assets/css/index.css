@@ -16,6 +16,11 @@ img {
 	pointer-events:none;
 }
 
+#btn_get_in_touch_footer:hover{
+	color: aqua;
+
+}
+
 .btn-dark {
 	padding:0.9rem;
 	margin-top:1rem;
@@ -52,16 +57,10 @@ img {
 .hire:hover {
 	background:#ffb700;
 	color:white;
+	cursor: progress;
+
 }
 
-hbMain {
-	display:block;
-	background:#ffb700;
-	height:auto;
-	text-align:center;
-	margin:auto;
-	padding-bottom:2.5rem;
-}
 /* 
 hbMain img {
 	
@@ -187,7 +186,7 @@ hbFooter {
 
 @font-face {
 	font-family:Maven;
-	src:url('/font/font.ttf');
+	src:url('../font/font.ttf');
 }
 
 @media screen and (max-width: 600px) {
