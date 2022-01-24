@@ -34,6 +34,7 @@ img {
 
 .btn-dark:hover {
 	box-shadow:0px 0px 0px 5px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
 }
 .nav-link:hover{
 	color: rgb(255, 0, 55);
@@ -57,7 +58,7 @@ img {
 .hire:hover {
 	background:#ffb700;
 	color:white;
-	cursor: progress;
+	cursor: pointer;
 
 }
 
