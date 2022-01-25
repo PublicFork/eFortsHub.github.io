@@ -2219,19 +2219,37 @@ for(var i = 0; i < surahJsonArray.length; i++)
     var index = surah['index'];
 
 
-    innerCode = innerCode+ `
-    <div class="col-lg-4 col-12 col-md-6 items">
-        <div class="items-wrapper">
-            <div class="inner-item">
+    innerCode = innerCode+ 
+    
+    // `
+    // <div class="col-lg-4 col-12 col-md-6 items">
+    //     <div class="items-wrapper">
+    //         <div class="inner-item">
+    //             <img src="../eFortsHub.ico" alt="">
+    //             <h4>`+title+`</h4>
+    //             <p>`+'subtitle'+`</p>
+    //             <h3>`+titleAr+`</h3>
+    //         </div>
+    //     </div>
+    // </div>`;
+
+
+`<div class="col-lg-4 col-12 col-md-6 items">
+    <div class="items-wrapper light-blue-content">
+        <div class="inner-item">
+            <div class="title-wrapper">
                 <img src="../eFortsHub.ico" alt="">
-                <h4>`+title+`</h4>
-                <p>`+'subtitle'+`</p>
-                <h3>`+titleAr+`</h3>
+                <div>
+                    <h4 class="light-blue-text">`+title+`</h4>
+                    <p class="light-blue-text">`+'subtitle'+`</p>
+                </div>
             </div>
+            <h3 class="light-blue-text-2">`+titleAr+`</h3>
         </div>
-    </div>`;
+    </div>
+</div>`;
 
 
 }
 
-//quranList.innerHTML = innerCode;
+quranList.innerHTML = innerCode;
