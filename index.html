@@ -1,186 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="keywords"
-		content="eFortsHub,eforsthub, eforthub,hbappi, bappi, android, bangladesh,EFORTSHUB,eforrshub,Addicted Programmer,H.Bappi,Android Developer,apasad,Bappi,bappi,freelancer,ashura,mst ashura,java,java developer">
-	<meta name="image" property="og:image" content="eFortsHub.ico">
-	<meta name="description" property="og:description"
-		content="Android app development solution for your idea by H.Bappi - Addicted Programmer. Available for local, freelance, remote work">
-	<meta name="author" content="H.Bappi - Addicted Programmer ">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="google-site-verification" content="an2MHJcXAWginSbKnxZ8QneQOXRtvKKjrhSLyj_pVps" />
-	<meta name="google-site-verification" content="iULHJi2KP2BpCfcPXPh8N_9c_sLcW39pWHYUz303r-A" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Quran</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
 
-	<link rel="icon" href="eFortsHub.ico" type="image/x-icon">
+    <style>
 
-	<title>eFortsHub | IT solution by H. Bappi</title>
-	<link type="text/css" rel="stylesheet" href="assets/css/index.css">
+        /*light blue theme-------  */
+
+        .light-blue-bg {
+            background-color: rgb(7, 24, 39);
+        }
+        .light-blue-content {
+            background: #195f70;
+        }
+
+        .light-blue-text{
+            color: white;
+        }
+        .light-blue-text-2{
+            color: rgb(142, 186, 221);
+        }
 
 
+        
+
+
+
+
+        .items-wrapper {
+
+            padding: 10px 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        .inner-item {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            text-align: center;
+            justify-content: space-between;
+
+
+        }
+
+        .inner-item div.title-wrapper {
+            display: flex;
+        }
+
+        .inner-item div {
+            padding-left: 8px;
+            text-align: start;
+        }
+
+        .inner-item img {
+            width: 30px;
+            height: 30px;
+            border-radius: 20px;
+            align-self: center;
+        }
+    </style>
 </head>
 
-<body>
+<body class="light-blue-bg">
+    <div class="container">
+        <div>
+            <div id="quran_list" class="row">
+                <div class="col-lg-4 col-12 col-md-6 items">
+                    <div class="items-wrapper light-blue-content">
+                        <div class="inner-item">
+                            <div class="title-wrapper">
+                                <img src="../eFortsHub.ico" alt="">
+                                <div>
+                                    <h4 class="light-blue-text">Title</h4>
+                                    <p class="light-blue-text">Subtitle</p>
+                                </div>
+                            </div>
+                            <h3 class="light-blue-text-2">الناس</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./qran.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
 
-	<hbToolbar>
-		<hbLogo>
-			<hbText>eFortsHub</hbText>
-		</hbLogo>
-
-		<hbMenu id="menu">
-			<ul>
-				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="#">Home</a>
-				</li>
-
-				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="services">Services</a>
-				</li>
-
-
-				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="#">Product</a>
-				</li>
-
-				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="#">About</a>
-				</li>
-
-				<li>
-					<button class="hire">Hire Now</button>
-				</li>
-			</ul>
-
-		</hbMenu>
-
-		<hbToggle>
-			<button id="toggleBtn">☰</button>
-		</hbToggle>
-
-	</hbToolbar>
-
-
-
-
-
-	<div style="display: flex;
-	width: 100%;
-    background-color: #ffb700;
-    position: relative; 
-    overflow: auto;
-    justify-content: space-evenly;
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-	">
-
-		<img style="float: left; width: 45vw;" src="assets/images/bg.png">
-		<div style="float: right;width: fit-content; height: 100%;">
-			<div style="text-align: center;">
-
-				<h2>Do hire us and let your thoughts become true</h2>
-				<br>
-				<a class="btn btn-dark" href="#">Hire Us Now</a>
-
-
-			</div>
-		</div>
-	</div>
-
-
-
-
-
-	<div id="footer">
-
-
-		<div class="footer_item center">
-			<h1 style="color: white;">eFortsHub</h1>
-			<br>
-			<p style="color: white;">Let us bring your service to the forefront of the world. Start working together
-				to create a great product</p>
-
-			<br>
-			<a id="btn_get_in_touch_footer" style="color: white; " href="#">Get in Touch &#10230;</a>
-		</div>
-
-		<div class="footer_item center wrap">
-			<div style="width: max-content; text-align: justify;">
-				<h3 style="color: white;">Business Hours</h3>
-				<div style="background-color: tomato; width: 20px; height: 2px;"></div>
-				<br>
-				<h4 style="color: white;">Opening Days:</h4>
-				<br>
-				<p style="color: white;">Saturday - Wednessday :9am to 8pm</p>
-				<br>
-
-				<p style="color: white;">Thursday :9am to 4pm</p>
-
-				<br>
-
-				<p style="color: white;">[Bangladesh estimated time]</p>
-				<br>
-
-				<br>
-				<h4 style="color: white;">Vacations:</h4>
-				<br>
-				<p style="color: white;">All Fridays</p>
-				<br>
-
-				<p style="color: white;">All Official Holidays</p>
-
-			</div>
-		</div>
-		<div class="footer_item">
-
-			<div class="find_us" style="width: max-content; text-align: justify;">
-				<h3 style="color: white;">Find us</h3>
-				<div style="background-color: tomato; width: 20px; height: 2px;"></div>
-				<br>
-				<h4 style="color: white;">eFortsHub:</h4>
-				<a target="_blank" href="https://github.com/efortshub">GitHub</a>
-				<br>
-				<a target="_blank" href="https://efortshub.tumblr.com">Tumblr</a>
-				<br>
-				<a target="_blank" href="https://www.linkedin.com/company/efortshub">LinkedIn</a>
-				<br>
-				<a target="_blank" href="https://twitter.com/efortshub">Twitter</a>
-				<br>
-				<a target="_blank" href="https://www.facebook.com/eFortsHub">Facebook</a>
-				<br>
-				<a target="_blank" href="https://www.instagram.com/efortshub">Instagram</a>
-				<br>
-				<a target="_blank" href="https://www.youtube.com/channel/UCaehDsTiUtXSaaT-6f4H6VA">YouTube</a>
-				<br>
-
-				<a target="_blank" href="https://www.hackerrank.com/eFortsHub">HackerRank</a>
-				<br>
-
-				<br>
-				<h4 style="color: white;">Email:</h4>
-				<br>
-				
-				<a class="mail" target="_blank" href="mailto:contact@efortshub.com">contact@efortshub.com</a>
-				<br>
-
-				<a class="mail" target="_blank" href="mailto:contact.efortshub@gmail.com">contact.efortshub@gmail.com</a>
-				<br>
-
-			</div>
-		
-
-		</div>
-
-	</div>
-
-	<div style="width: 100%; text-align: end; padding: 25px; background-color:  rgb(37, 37, 37);">
-		<font style="color: white;">Copyright &copy; <font id="year"></font> - eFortsHub. All right reserved</font> 
-	</div>
-
-	<script type="text/javascript" src="assets/js/index.js"></script>
 </body>
 
 </html>
