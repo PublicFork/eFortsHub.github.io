@@ -2235,16 +2235,16 @@ for(var i = 0; i < surahJsonArray.length; i++)
 
 
 `<div class="col-lg-4 col-12 col-md-6 items">
-    <div class="items-wrapper light-blue-content">
+    <div class="items-wrapper dark-blue-content">
         <div class="inner-item">
             <div class="title-wrapper">
                 <img src="../eFortsHub.ico" alt="">
                 <div>
-                    <h4 class="light-blue-text">`+title+`</h4>
-                    <p class="light-blue-text">`+'subtitle'+`</p>
+                    <h4 class="dark-blue-text">`+title+`</h4>
+                    <p class="dark-blue-text">`+'subtitle'+`</p>
                 </div>
             </div>
-            <h3 class="light-blue-text-2">`+titleAr+`</h3>
+            <h3 class="dark-blue-text-2">`+titleAr+`</h3>
         </div>
     </div>
 </div>`;
