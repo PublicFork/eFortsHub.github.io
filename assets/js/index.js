@@ -1,5 +1,9 @@
 let isOpen = false
 
+
+
+document.getElementById('year').innerHTML = new Date().getFullYear();
+
 toggleBtn.addEventListener('click', () => {
 	if (!isOpen) {
 		openMenu()

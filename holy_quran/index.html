@@ -1,1 +1,77 @@
-Holy Quran
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Quran</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: rgb(7, 24, 39);
+        }
+
+        .items-wrapper {
+
+            padding: 10px 10px;
+            background: #195f70;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        .inner-item {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            text-align: center;
+            justify-content: space-between;
+
+
+        }
+        .inner-item div.title-wrapper{
+            display: flex;
+        }
+        .inner-item div{
+            color: white;
+            padding-left: 8px;
+            text-align: start;
+        }
+
+        .inner-item img {
+            width: 30px;
+            height: 30px;
+            border-radius: 20px;
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <div id="quran_list" class="row">
+                <div class="col-lg-4 col-12 col-md-6 items">
+                    <div class="items-wrapper">
+                        <div class="inner-item">
+                            <div class="title-wrapper">
+                                <img src="../eFortsHub.ico" alt="">
+                                <div>
+                                    <h4>Title</h4>
+                                    <p>Subtitle</p>
+                                </div>
+                            </div>
+                            <h3>الناس</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./qran.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

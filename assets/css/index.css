@@ -34,6 +34,7 @@ img {
 
 .btn-dark:hover {
 	box-shadow:0px 0px 0px 5px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
 }
 .nav-link:hover{
 	color: rgb(255, 0, 55);
@@ -57,7 +58,7 @@ img {
 .hire:hover {
 	background:#ffb700;
 	color:white;
-	cursor: progress;
+	cursor: pointer;
 
 }
 
@@ -189,6 +190,41 @@ hbFooter {
 	src:url('../font/font.ttf');
 }
 
+
+#footer{
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	height: 100%;
+	background-color: rgb(37, 37, 37);
+	width: 100%;
+}
+.footer_item{
+	width: 100%;
+	height: 100%;
+	padding: 16px;
+	}
+	.center{
+	text-align: center;
+	}
+	.wrap{
+		width: max-content;
+	}
+	.find_us a{
+		color: #ffb700;
+		text-decoration: underline;
+	}
+
+	.find_us .mail{
+		text-decoration: none;
+		color: white;
+	}
+
+
 @media screen and (max-width: 600px) {
 	hbMenu ul {
 		text-align:center;
@@ -235,4 +271,26 @@ hbFooter {
 		color:#ffb700;
 		border-radius:5px;
 	}
+	#footer{
+
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		height: 100%;
+		background-color: rgb(37, 37, 37);
+		width: 100%;
+	}
+	.footer_item{
+		
+		height: 100%;
+		width: 100%;
+		height: 100%;
+		padding: 20px;
+		}
+		.center{
+			text-align: center;
+		}
 }
