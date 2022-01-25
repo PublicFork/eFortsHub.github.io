@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,42 +9,88 @@
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
 
     <style>
-        .items-wrapper{
-              
+
+        /*light blue theme-------  */
+
+        .light-blue-bg {
+            background-color: rgb(7, 24, 39);
+        }
+        .light-blue-content {
+            background: #195f70;
+        }
+
+        .light-blue-text{
+            color: white;
+        }
+        .light-blue-text-2{
+            color: rgb(142, 186, 221);
+        }
+
+
+        
+
+
+
+
+        .items-wrapper {
+
             padding: 10px 10px;
-            background: #ff5200;
             margin-bottom: 10px;
             border-radius: 8px;
         }
 
-        .inner-item{
-
-     }
-
-.inner-item img{
-   width: 30px;
-   height: 30px;
-   border-radius: 20px;
-}
+        .inner-item {
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            text-align: center;
+            justify-content: space-between;
 
 
-        
+        }
+
+        .inner-item div.title-wrapper {
+            display: flex;
+        }
+
+        .inner-item div {
+            padding-left: 8px;
+            text-align: start;
+        }
+
+        .inner-item img {
+            width: 30px;
+            height: 30px;
+            border-radius: 20px;
+            align-self: center;
+        }
     </style>
 </head>
-<body>
-    <div  class="container">
+
+<body class="light-blue-bg">
+    <div class="container">
         <div>
-             <div id="quran_list" class="row">
-                
-        
-             </div>
+            <div id="quran_list" class="row">
+                <div class="col-lg-4 col-12 col-md-6 items">
+                    <div class="items-wrapper light-blue-content">
+                        <div class="inner-item">
+                            <div class="title-wrapper">
+                                <img src="../eFortsHub.ico" alt="">
+                                <div>
+                                    <h4 class="light-blue-text">Title</h4>
+                                    <p class="light-blue-text">Subtitle</p>
+                                </div>
+                            </div>
+                            <h3 class="light-blue-text-2">الناس</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </div>
-
     <script src="./qran.js"></script>
-
     <script src="./bootstrap/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
