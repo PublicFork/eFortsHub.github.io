@@ -57,9 +57,8 @@ function loadSurahListCenter() {
 const themeList = document.getElementById("forTheme");
 
 /*list all theme here*/
-let themes = ["dark-blue", "dark-orange"];
-
-var mainTheme='dark-blue';
+const themes = ["dark-blue", "dark-orange", "dark-green", "light-green"];
+let mainTheme = 'dark-blue';
 
 
 var themeInnerCode = "";
@@ -69,57 +68,58 @@ for (var i = 0; i < themes.length; i++) {
   themeInnerCode =
     themeInnerCode +
     `
-    <div id="`+themeName+`" class="themeItem `+themeName+`-content">
-    <p  class="">eFortsHub</p> 
-    <button disabled class="">Button</button>
+    <div id="`+ themeName + `" class="themeItem  themeContent ` + themeName + `-content">
+    <p  class="themeContent `+themeName+`-text">eFortsHub</p> 
+    <p id="btnTh" class="themeContent `+themeName+`-text-2 `+themeName+`-bg">Button</p>
 </div>`;
+}
 
 themeList.innerHTML = themeInnerCode;
 
-var item = document.getElementById(themeName);
 
-item.addEventListener("click", function(){
+for (var i = 0; i < themes.length; i++) {
+  const themeName = themes[i];
+ document.getElementById(themeName).addEventListener("click", function () {
 
-    var itemsbg = document.querySelectorAll("." + mainTheme + "dark-blue-bg");
+    var itemsbg = document.querySelectorAll("." + mainTheme + "-bg");
     const itemscontent = document.querySelectorAll("." + mainTheme + "-content");
     const itemstext = document.querySelectorAll("." + mainTheme + "-text");
     const itemstext2 = document.querySelectorAll("." + mainTheme + "-text-2");
-  
+
     for (var v = 0; v < itemsbg.length; v++) {
 
-    if(!itemsbg[v].classList.contains('themeItem')){
-
-      itemsbg[v].classList.remove(mainTheme + "-bg");
-      itemsbg[v].classList.add(themeName + "-bg");
-        }
+      if (!itemsbg[v].classList.contains('themeContent')) {
+        itemsbg[v].classList.remove(mainTheme + "-bg");
+        itemsbg[v].classList.add(themeName + "-bg");
+      }
 
     }
-  
+
     for (let v = 0; v < itemscontent.length; v++) {
-        if(!itemscontent[v].classList.contains('themeItem')){
-      itemscontent[v].classList.remove(mainTheme + "-content");
-      itemscontent[v].classList.add(themeName + "-content");
-        }
+      if (!itemscontent[v].classList.contains('themeContent')) {
+        itemscontent[v].classList.remove(mainTheme + "-content");
+        itemscontent[v].classList.add(themeName + "-content");
+      }
     }
-  
-    for (var v = 0; v < itemstext.length; v++) {
-        if(!itemstext[v].classList.contains('themeItem')){
-      itemstext[v].classList.remove(mainTheme + "-text");
-      itemstext[v].classList.add(themeName + "-text");
-        }
-    }
-  
-    for (var v = 0; v < itemstext2.length; v++) {
-        if(!itemstext2[v].classList.contains('themeItem')){
-      itemstext2[v].classList.remove(mainTheme + "-text-2");
-      itemstext2[v].classList.add(themeName + "-text-2");
-        }
-    }
-  
-    mainTheme = themeName;
 
-})
+    for (var v = 0; v < itemstext.length; v++) {
+      if (!itemstext[v].classList.contains('themeContent')) {
+        itemstext[v].classList.remove(mainTheme + "-text");
+        itemstext[v].classList.add(themeName + "-text");
+      }
+    }
+
+    for (var v = 0; v < itemstext2.length; v++) {
+      if (!itemstext2[v].classList.contains('themeContent')) {
+        itemstext2[v].classList.remove(mainTheme + "-text-2");
+        itemstext2[v].classList.add(themeName + "-text-2");
+      }
+    }
+
+    mainTheme = themeName;
+  })
 
 }
+
 
 

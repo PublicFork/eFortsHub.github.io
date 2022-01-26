@@ -1,7 +1,7 @@
 /*dark blue theme-------  */
 
 .dark-blue-bg{
-  background-color: rgb(1, 19, 22);
+  background: rgb(1, 19, 22);
 }
 
 .dark-blue-content {
@@ -16,10 +16,10 @@
   color: rgb(122, 218, 235);
 }
 
-/*dark blue theme-------  */
+/*dark orange theme-------  */
 
 .dark-orange-bg {
-  background-color:rgb(82, 37, 16);
+  background:rgb(82, 37, 16);
 }
 .dark-orange-content {
   background: rgb(192, 73, 29);
@@ -31,6 +31,37 @@
   color: rgb(241, 188, 127);
 }
 
+
+/*dark green theme-------  */
+
+.dark-green-bg {
+  background:rgb(16, 65, 23);
+}
+.dark-green-content {
+  background: rgb(21, 158, 39);
+}
+.dark-green-text {
+  color: rgb(255, 255, 255);
+}
+.dark-green-text-2 {
+  color: rgb(136, 241, 127);
+}
+
+
+/*light green theme-------  */
+
+.light-green-bg {
+  background:rgb(193, 226, 198);
+}
+.light-green-content {
+  background: rgb(76, 179, 90);
+}
+.light-green-text {
+  color: rgb(0, 0, 0);
+}
+.light-green-text-2 {
+  color: rgb(15, 48, 12);
+}
 
 
 .round {
@@ -66,6 +97,10 @@
   justify-content: space-between;
 
 
+}
+#btnTh{
+  padding: 8px;
+  border-radius: 8px;
 }
 
 .inner-item div.title-wrapper {
@@ -141,6 +176,7 @@ li a{
 label #bars,label #close{
   position:absolute;
   padding:15px;
+  cursor: pointer;
   transition-duration:.5s;
   border-radius: 0px 10px;
   
@@ -200,6 +236,7 @@ label #close{
   display: flex;
   overflow-x: auto;
   padding-bottom: 10px;
+  cursor: pointer;
 }
 
 .forTheme::-webkit-scrollbar{
