@@ -122,7 +122,48 @@
 
 /*---------------Navbar Start-------------*/
 
+@media screen and (max-width: 420px){
+  
+.sidebar{
+  height:100vh;
+  position:fixed;
+  width:95%;
+  transition-duration:.5s;
+  z-index:2000;
+  right:-300px;
+  top:0px;
+  font-weight:bold;
+}
 
+}
+@media screen and (max-width: 760px){
+  
+.sidebar{
+  height:100vh;
+  position:fixed;
+  width:50%;
+  transition-duration:.5s;
+  z-index:2000;
+  right:-300px;
+  top:0px;
+  font-weight:bold;
+}
+
+}
+@media screen and (max-width: 860px){
+  
+.sidebar{
+  height:100vh;
+  position:fixed;
+  width:30%;
+  transition-duration:.5s;
+  z-index:2000;
+  right:-300px;
+  top:0px;
+  font-weight:bold;
+}
+
+}
 
 .sidebar{
   height:100vh;
