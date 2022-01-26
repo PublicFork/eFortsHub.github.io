@@ -1,99 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Holy Quran</title>
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+      <!--------- google fonts --------->
+      <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+      <!--------- google fonts --------->
+      <link rel="stylesheet" href="quran.css">
 
-    <style>
-
-
-
-        /*light blue theme-------  */
-
-        .dark-blue-bg {
-            background-color: rgb(7, 24, 39);
-        }
-
-        .dark-blue-content {
-            background: #195f70;
-        }
-
-        .dark-blue-text {
-            color: white;
-        }
-
-        .dark-blue-text-2 {
-            color: rgb(142, 186, 221);
-        }
-
-
-
-
-
-
-
-        .items-wrapper {
-            padding: 10px 10px;
-            margin-bottom: 10px;
-            border-radius: 8px;
-        }
-
-        .inner-item {
-            display: flex;
-            flex-direction: row;
-            align-content: center;
-            text-align: center;
-            justify-content: space-between;
-
-
-        }
-
-        .inner-item div.title-wrapper {
-            display: flex;
-        }
-
-        .inner-item div {
-            padding-left: 8px;
-            text-align: start;
-        }
-
-        .inner-item img {
-            width: 30px;
-            height: 30px;
-            border-radius: 20px;
-            align-self: center;
-        }
-    </style>
+      <!--------- font Awesome link  ------------>
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <!--------- font Awesome link  ------------>
 </head>
-
-<body class="dark-blue-bg">
+<body>
+    <div class="dark-blue-bg">
     <div class="container">
-        <div>
-            <div id="quran_list" class="row">
-                <div class="col-lg-4 col-12 col-md-6 items">
-                    <div class="items-wrapper dark-blue-content">
-                        <div class="inner-item">
-                            <div class="title-wrapper">
-                                <img src="../eFortsHub.ico" alt="">
-                                <div>
-                                    <h4 class="dark-blue-text">Title</h4>
-                                    <p class="dark-blue-text">Subtitle</p>
-                                </div>
-                            </div>
-                            <h3 class="dark-blue-text-2">الناس</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+<!------------Sidebar Start-------------->       
+        
+        
+<input type="checkbox" id="check">  
+
+<label for="check">
+     <i class="fa fa-cog dark-blue-content dark-blue-text-2" id="bars"></i>
+     <i class="fa fa-times dark-blue-content dark-blue-text-2" id="close"></i>
+</label>    
+     
+        
+ <div class="sidebar dark-blue-bg">
+     <h4 class="dark-blue-text-2">HOLY QURAN</h4>
+<ul>    
+    <li><a href="#" class="dark-blue-text-2"> Themes </a></li> 
+    <div id="forTheme" class="forTheme">
+        <div id="change" class="themeItem dark-blue-content">
+            <p  class="">eFortsHub</p> 
+            <button disabled class="">Orange</button>
         </div>
+
+
+    </div>   
+   <li><a href="#" class="dark-blue-text-2">Home</a></li>
+   
+</ul>
+ </div>    
+        
+ <!------------Sidebar End-------------->
+
+        <h1 class="text-center">
+            Bismillahir Rahmanir Rahim 
+        </h1>
+
+
+       <div id="quran_list" class="row whole-item-wraper">
+
+       </h1>
     </div>
+
+</div>
+
+
     <script src="./qran.js"></script>
+
     <script src="./bootstrap/js/bootstrap.min.js"></script>
 
 </body>
-
 </html>
