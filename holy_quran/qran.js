@@ -57,9 +57,15 @@ function loadSurahListCenter() {
 const themeList = document.getElementById("forTheme");
 
 /*list all theme here*/
-const themes = ["dark-blue", "dark-orange", "dark-green", "light-green"];
-let mainTheme = 'dark-blue';
+const themes = [
+  "dark-blue",
+  "dark-orange",
+  "dark-green",
+  "light-green"
 
+];
+
+let mainTheme = 'dark-blue';
 
 var themeInnerCode = "";
 for (var i = 0; i < themes.length; i++) {
@@ -69,8 +75,8 @@ for (var i = 0; i < themes.length; i++) {
     themeInnerCode +
     `
     <div id="`+ themeName + `" class="themeItem  themeContent ` + themeName + `-content">
-    <p  class="themeContent `+themeName+`-text">eFortsHub</p> 
-    <p id="btnTh" class="themeContent `+themeName+`-text-2 `+themeName+`-bg">Button</p>
+    <p  class="themeContent `+ themeName + `-text">eFortsHub</p> 
+    <p id="btnTh" class="themeContent `+ themeName + `-text-2 ` + themeName + `-bg">Button</p>
 </div>`;
 }
 
@@ -79,7 +85,7 @@ themeList.innerHTML = themeInnerCode;
 
 for (var i = 0; i < themes.length; i++) {
   const themeName = themes[i];
- document.getElementById(themeName).addEventListener("click", function () {
+  document.getElementById(themeName).addEventListener("click", function () {
 
     var itemsbg = document.querySelectorAll("." + mainTheme + "-bg");
     const itemscontent = document.querySelectorAll("." + mainTheme + "-content");

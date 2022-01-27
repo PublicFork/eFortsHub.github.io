@@ -1,6 +1,6 @@
 /*dark blue theme-------  */
 
-.dark-blue-bg{
+.dark-blue-bg {
   background: rgb(1, 19, 22);
 }
 
@@ -19,7 +19,7 @@
 /*dark orange theme-------  */
 
 .dark-orange-bg {
-  background:rgb(82, 37, 16);
+  background: rgb(82, 37, 16);
 }
 .dark-orange-content {
   background: rgb(192, 73, 29);
@@ -31,11 +31,10 @@
   color: rgb(241, 188, 127);
 }
 
-
 /*dark green theme-------  */
 
 .dark-green-bg {
-  background:rgb(16, 65, 23);
+  background: rgb(16, 65, 23);
 }
 .dark-green-content {
   background: rgb(21, 158, 39);
@@ -47,11 +46,10 @@
   color: rgb(136, 241, 127);
 }
 
-
 /*light green theme-------  */
 
 .light-green-bg {
-  background:rgb(193, 226, 198);
+  background: rgb(193, 226, 198);
 }
 .light-green-content {
   background: rgb(76, 179, 90);
@@ -63,7 +61,6 @@
   color: rgb(15, 48, 12);
 }
 
-
 .round {
   width: 30px;
   height: 30px;
@@ -74,13 +71,7 @@
   text-align: center;
   font-size: 14px;
   margin-left: -12px;
- 
 }
-
-
-
-
-
 
 /* botstrap design er code */
 .items-wrapper {
@@ -95,10 +86,8 @@
   align-content: center;
   text-align: center;
   justify-content: space-between;
-
-
 }
-#btnTh{
+#btnTh {
   padding: 8px;
   border-radius: 8px;
 }
@@ -119,175 +108,172 @@
   align-self: center;
 }
 
-
 /*---------------Navbar Start-------------*/
 
-@media screen and (max-width: 420px){
-  
-.sidebar{
-  height:100vh;
-  position:fixed;
-  width:95%;
-  transition-duration:.5s;
-  z-index:2000;
-  right:-300px;
-  top:0px;
-  font-weight:bold;
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  width: 380px;
+  transition-duration: 0.5s;
+  z-index: 2000;
+  right: -380px;
+  top: 0px;
+  font-weight: bold;
 }
 
+@media screen and (max-width: 980px) {
+  .sidebar {
+    height: 100vh;
+    position: fixed;
+    width: 35vw;
+    transition-duration: 0.5s;
+    z-index: 2000;
+    right: -35vw;
+    top: 0px;
+    font-weight: bold;
+  }
 }
-@media screen and (max-width: 760px){
-  
-.sidebar{
-  height:100vh;
-  position:fixed;
-  width:50%;
-  transition-duration:.5s;
-  z-index:2000;
-  right:-300px;
-  top:0px;
-  font-weight:bold;
+@media screen and (max-width: 760px) {
+  .sidebar {
+    height: 100vh;
+    position: fixed;
+    width: 55vw;
+    transition-duration: 0.5s;
+    z-index: 2000;
+    right: -55vw;
+    top: 0px;
+    font-weight: bold;
+  }
 }
-
+@media screen and (max-width: 640px) {
+  .sidebar {
+    height: 100vh;
+    position: fixed;
+    width: 70vw;
+    transition-duration: 0.5s;
+    z-index: 2000;
+    right: -70vw;
+    top: 0px;
+    font-weight: bold;
+  }
 }
-@media screen and (max-width: 860px){
-  
-.sidebar{
-  height:100vh;
-  position:fixed;
-  width:30%;
-  transition-duration:.5s;
-  z-index:2000;
-  right:-300px;
-  top:0px;
-  font-weight:bold;
-}
-
-}
-
-.sidebar{
-  height:100vh;
-  position:fixed;
-  width:320px;
-  transition-duration:.5s;
-  z-index:2000;
-  right:-300px;
-  top:0px;
-  font-weight:bold;
-}
-
-
-.sidebar h4{
-  padding:15px 40px;
-  margin-top:20px;
-  font-size:13px;
-  letter-spacing:1px;
-  font-weight:bolder;
-  
-  
+@media screen and (max-width: 480px) {
+  .sidebar {
+    height: 100vh;
+    position: fixed;
+    width: 90vw;
+    transition-duration: 0.5s;
+    z-index: 2000;
+    right: -90vw;
+    top: 0px;
+    font-weight: bold;
+  }
 }
 
-
-.sidebar a{
-  width:100%;
-  box-sizing:border-box;
-  padding-left:40px;
-  font-size:15px;
-  line-height:40px;
-  text-decoration:none;
+.sidebar h4 {
+  padding: 15px 40px;
+  margin-top: 20px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: bolder;
 }
 
-.sidebar a:hover{text-decoration:none;}
+.sidebar a {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 40px;
+  font-size: 15px;
+  line-height: 40px;
+  text-decoration: none;
+}
 
+.sidebar a:hover {
+  text-decoration: none;
+}
 
 /*---------------Developing part--------------+*/
 
-ul{
+ul {
   list-style-type: none;
 }
 
-li a{
- 
+li a {
   margin-left: -40px;
 }
 
-#check{display:none;}
+#check {
+  display: none;
+}
 
-
-label #bars,label #close{
-  position:absolute;
-  padding:15px;
+label #bars,
+label #close {
+  position: absolute;
+  padding: 15px;
   cursor: pointer;
-  transition-duration:.5s;
+  transition-duration: 0.5s;
   border-radius: 0px 10px;
+}
+.top-bar{
+  position: fixed;
+  width: 100vw;
   
+  height: auto;
+  z-index: 2000;
 }
 
-
-label #bars{
-  right:20px;
-  top:20px;
-  font-size:20px;
-  z-index:98;
-  position:fixed;
-  padding:10px;
-  
+label #bars {
+  position: fixed;
+  font-size: 20px;
+  right: 20px;
+  top: 20px;
+  padding: 10px;
 }
 
-
-
-
-label #close{
-  top:20px;
-  z-index:10;
+label #close {
+  position: fixed;
+  top: 20px;
+  z-index: 10;
   /*left:-300px;*/
-  opacity:0;
-  position:fixed;
-  right:20px;
+  opacity: 0;
+  right: 20px;
 }
 
-
-#check:checked ~ .sidebar{
-  right:0px;
+#check:checked ~ .sidebar {
+  right: 0px;
 }
 
-
-#check:checked ~ label #bars{
-  opacity:0;
-  pointer-events:none;
+#check:checked ~ label #bars {
+  opacity: 0;
+  pointer-events: none;
 }
 
-
-#check:checked ~ label #close{      
-     position:fixed;
-     z-index:105000;
-     opacity:1;
+#check:checked ~ label #close {
+  position: fixed;
+  z-index: 105000;
+  opacity: 1;
 }
 
-.sidebar li{transition-duration:0.5s;}
-
-
+.sidebar li {
+  transition-duration: 0.5s;
+}
 
 /*---------------Navbar End----------------*/
 
-
 /* for theme */
 
-.forTheme{
+.forTheme {
   display: flex;
   overflow-x: auto;
   padding-bottom: 10px;
   cursor: pointer;
 }
 
-.forTheme::-webkit-scrollbar{
+.forTheme::-webkit-scrollbar {
   border-radius: 20px;
   margin-top: 20px;
   height: 10px;
   width: 50% !important;
 }
-
-
 
 /* Track */
 .forTheme::-webkit-scrollbar-track {
@@ -296,12 +282,12 @@ label #close{
 
 /* Handle */
 .forTheme::-webkit-scrollbar-thumb {
-  border-radius:20px;
+  border-radius: 20px;
 }
 
 /* Handle on hover */
 
-.themeItem {  
+.themeItem {
   min-height: 100px;
   margin-right: 20px;
   min-width: 100px;
@@ -313,8 +299,3 @@ label #close{
   padding: 5px;
   border-radius: 10px;
 }
-.themeItem img{
-  width: 100%;
-}
-
-
