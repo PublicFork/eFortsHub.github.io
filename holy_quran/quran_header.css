@@ -31,7 +31,7 @@
   padding: 16px;
   font-weight: bold;
   height: 100%;
-  border-radius: 20px 0 0 0;
+  border-radius: 0 20px 0 0;
   border: 1px solid grey;
 }
 
@@ -237,6 +237,9 @@ label #surahs-close {
 
 #surahs-checkbox:checked ~ .left-sidebar {
   left: 0;
+}
+.right{
+  align-items: flex-end;
 }
 
 /* surah list style end  */
