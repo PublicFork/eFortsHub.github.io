@@ -1,6 +1,7 @@
 const quranList = document.getElementById("quran_list");
 
 let surahJsonArray = "";
+let selectedTranscript = 'imlaei';
 
 fetch("./api/surah.json")
   .then((response) => response.json())
@@ -12,21 +13,25 @@ fetch("./api/surah.json")
 function loadSurahListCenter() {
   var innerCode = "";
 
+  var indexes = [];
+
   for (var i = 0; i < surahJsonArray.length; i++) {
-    var surah = surahJsonArray[i];
-    var place = surah["place"];
-    var type = surah["type"];
-    var ayahCount = surah["count"];
-    var title = surah["title"];
-    var titleAr = surah["titleAr"];
-    var pages = surah["pages"];
-    var index = surah["index"];
+    const surah = surahJsonArray[i];
+    const place = surah["place"];
+    const type = surah["type"];
+    const ayahCount = surah["count"];
+    const title = surah["title"];
+    const titleAr = surah["titleAr"];
+    const pages = surah["pages"];
+    const index = surah["index"];
+
+    indexes.push(index);
 
     // innerCode = innerCode+ `<div class=\"col-lg-4 col-sm-12 col-md-6 items\"><div class=\"items-wrapper"><div class="inner-item"><img src="../eFortsHub.ico" alt=""><h4>`+title+`</h4> <p>`+'subtitle'+`</p> <h3>`+titleAr+`</h3></div></div></div>`;
 
     innerCode =
       innerCode +
-      `<div class="col-lg-4 col-12 col-md-6 items">
+      `<div id="sura` + index + `" class="col-lg-4 col-12 col-md-6 items">
             <div class="items-wrapper dark-blue-content">
                 <div class="inner-item">
                     <div class="title-wrapper ra">
@@ -51,8 +56,60 @@ function loadSurahListCenter() {
             </div>
         </div>`;
   }
-
   quranList.innerHTML = innerCode;
+
+
+  for(var i=0; i<indexes.length; i++){
+    const index = indexes[i];
+    const button = 'sura'+index;
+
+    document.getElementById(button)
+    .addEventListener('click', function(){
+      fetch('./api/surah/'+selectedTranscript+'/'+index+'.json')
+      .then((response) => response.json())
+      .then((data) =>{
+        const sura = data.sura;
+        const content = data.content;
+
+        let surahInnerCode = '';
+        
+        content.forEach(element => {
+
+          const id = element.id;
+          const verse_key = element.verse_key;
+          const verse = verse_key.replace(sura+':', '');
+          const text = element.text;
+
+
+          surahInnerCode = surahInnerCode+
+          id+`<br>`+ verse +`<br>`+ text +` `+
+          `
+<br><br><br>
+
+
+
+          `;
+
+
+
+
+
+          
+        });
+
+        quranList.innerHTML = surahInnerCode;
+        
+      })
+
+    })
+
+    
+  }
+
+
+
+
+
 }
 const themeList = document.getElementById("forTheme");
 

@@ -7,6 +7,9 @@
 .dark-blue-content {
   background: #195f70;
 }
+.abcd{
+  filter: invert(26%) sepia(91%) saturate(394%) hue-rotate(145deg) brightness(96%) contrast(90%);
+}
 
 .dark-blue-text {
   color: white;
@@ -108,194 +111,44 @@
   align-self: center;
 }
 
-/*---------------Navbar Start-------------*/
 
-.sidebar {
-  height: 100vh;
-  position: fixed;
-  width: 380px;
-  transition-duration: 0.5s;
-  z-index: 2000;
-  right: -380px;
-  top: 0px;
-  font-weight: bold;
+#wpcp-error-message {
+    direction: ltr;
+    text-align: center;
+    transition: opacity .9s ease 0s;
+    z-index: 99999999;
 }
-
-@media screen and (max-width: 980px) {
-  .sidebar {
-    height: 100vh;
+.warning-wpcp {
+    background: #ffecec url(https://agrobd24.com/wp-content/plugins/wp-content-copy-protector/images/warning.png) no-repeat 10px 50%;
+}
+.msgmsg-box-wpcp {
+    border: 1px solid #f5aca6;
+    border-radius: 10px;
+    color: #555;
+    font-family: Tahoma;
+    font-size: 11px;
+    margin: 10px;
+    padding: 10px 36px;
     position: fixed;
-    width: 35vw;
-    transition-duration: 0.5s;
-    z-index: 2000;
-    right: -35vw;
-    top: 0px;
-    font-weight: bold;
-  }
+    width: 255px;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -130px;
+    -webkit-box-shadow: 0 0 34px 2px #f2bfbf;
+    -moz-box-shadow: 0 0 34px 2px #f2bfbf;
+    box-shadow: 0 0 34px 2px #f2bfbf;
 }
-@media screen and (max-width: 760px) {
-  .sidebar {
-    height: 100vh;
-    position: fixed;
-    width: 55vw;
-    transition-duration: 0.5s;
-    z-index: 2000;
-    right: -55vw;
-    top: 0px;
-    font-weight: bold;
-  }
+.hideme {
+    opacity: 0;
+    visibility: hidden;
 }
-@media screen and (max-width: 640px) {
-  .sidebar {
-    height: 100vh;
-    position: fixed;
-    width: 70vw;
-    transition-duration: 0.5s;
-    z-index: 2000;
-    right: -70vw;
-    top: 0px;
-    font-weight: bold;
-  }
-}
-@media screen and (max-width: 480px) {
-  .sidebar {
-    height: 100vh;
-    position: fixed;
-    width: 90vw;
-    transition-duration: 0.5s;
-    z-index: 2000;
-    right: -90vw;
-    top: 0px;
-    font-weight: bold;
-  }
+*, *:before, *:after {
+    box-sizing: border-box;
 }
 
-.sidebar h4 {
-  padding: 15px 40px;
-  margin-top: 20px;
-  font-size: 13px;
-  letter-spacing: 1px;
-  font-weight: bolder;
-}
-
-.sidebar a {
-  width: 100%;
-  box-sizing: border-box;
-  padding-left: 40px;
-  font-size: 15px;
-  line-height: 40px;
-  text-decoration: none;
-}
-
-.sidebar a:hover {
-  text-decoration: none;
-}
-
-/*---------------Developing part--------------+*/
-
-ul {
-  list-style-type: none;
-}
-
-li a {
-  margin-left: -40px;
-}
-
-#check {
-  display: none;
-}
-
-label #bars,
-label #close {
-  position: absolute;
-  padding: 15px;
-  cursor: pointer;
-  transition-duration: 0.5s;
-  border-radius: 0px 10px;
-}
-.top-bar{
-  position: fixed;
-  width: 100vw;
-  
-  height: auto;
-  z-index: 2000;
-}
-
-label #bars {
-  position: fixed;
-  font-size: 20px;
-  right: 20px;
-  top: 20px;
-  padding: 10px;
-}
-
-label #close {
-  position: fixed;
-  top: 20px;
-  z-index: 10;
-  /*left:-300px;*/
-  opacity: 0;
-  right: 20px;
-}
-
-#check:checked ~ .sidebar {
-  right: 0px;
-}
-
-#check:checked ~ label #bars {
-  opacity: 0;
-  pointer-events: none;
-}
-
-#check:checked ~ label #close {
-  position: fixed;
-  z-index: 105000;
-  opacity: 1;
-}
-
-.sidebar li {
-  transition-duration: 0.5s;
-}
-
-/*---------------Navbar End----------------*/
-
-/* for theme */
-
-.forTheme {
-  display: flex;
-  overflow-x: auto;
-  padding-bottom: 10px;
-  cursor: pointer;
-}
-
-.forTheme::-webkit-scrollbar {
-  border-radius: 20px;
-  margin-top: 20px;
-  height: 10px;
-  width: 50% !important;
-}
-
-/* Track */
-.forTheme::-webkit-scrollbar-track {
-  border-radius: 20px;
-}
-
-/* Handle */
-.forTheme::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-}
-
-/* Handle on hover */
-
-.themeItem {
-  min-height: 100px;
-  margin-right: 20px;
-  min-width: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
-  padding: 5px;
-  border-radius: 10px;
+.unselectable {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
 }
