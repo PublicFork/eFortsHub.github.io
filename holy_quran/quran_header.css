@@ -28,7 +28,7 @@
   position: fixed;
   z-index: 5;
   transition-duration: 0.5s;
-  
+    padding-right: 8px;
   font-weight: bold;
   height: 100%;
   border-radius: 0 20px 0 0;
@@ -100,6 +100,7 @@
     font-weight: bold;
     height: 100%;
   }
+
 }
 @media screen and (max-width: 640px) {
   .right-sidebar {
@@ -124,6 +125,7 @@
     font-weight: bold;
     height: 100%;
   }
+
 }
 @media screen and (max-width: 480px) {
   .right-sidebar {
@@ -150,6 +152,7 @@
     
     
   }
+
 }
 
 .leftSurahScroller{
@@ -375,6 +378,11 @@ label #surahs-close {
 }
 .singleSurahNameWrap{
   cursor: pointer;
+}
+
+#leftSidebarSurahList{
+  padding: 8px;
+
 }
 
 
