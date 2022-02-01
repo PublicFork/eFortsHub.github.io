@@ -1,188 +1,332 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="keywords"
-		content="eFortsHub,eforsthub, eforthub,hbappi, bappi, android, bangladesh,EFORTSHUB,eforrshub,Addicted Programmer,H.Bappi,Android Developer,apasad,Bappi,bappi,freelancer,ashura,mst ashura,java,java developer">
-	<meta name="image" property="og:image" content="eFortsHub.ico">
-	<meta name="description" property="og:description"
-		content="Android app development solution for your idea by H.Bappi - Addicted Programmer. Available for local, freelance, remote work">
-	<meta name="author" content="H.Bappi - Addicted Programmer ">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="google-site-verification" content="an2MHJcXAWginSbKnxZ8QneQOXRtvKKjrhSLyj_pVps" />
-	<meta name="google-site-verification" content="iULHJi2KP2BpCfcPXPh8N_9c_sLcW39pWHYUz303r-A" />
-
-	<link rel="icon" href="eFortsHub.ico" type="image/x-icon">
-
-	<title>eFortsHub | IT solution by H. Bappi</title>
-	<link type="text/css" rel="stylesheet" href="assets/css/index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Quran</title>
 
 
 
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.css" />
+    <link rel="stylesheet" href="quran_header.css">
+    <link rel="stylesheet" href="quran.css">
+
+
+
+    <!--    
+<script id="wpcp_disable_selection" type="text/javascript">var image_save_msg = 'You are not allowed to save images!';
+    var no_menu_msg = 'Context Menu disabled!';
+    var smessage = "Content is protected !!";
+
+    function disableEnterKey(e) {
+        var elemtype = e.target.tagName;
+
+        elemtype = elemtype.toUpperCase();
+
+        if (elemtype == "TEXT" || elemtype == "TEXTAREA" || elemtype == "INPUT" || elemtype == "PASSWORD" || elemtype == "SELECT" || elemtype == "OPTION" || elemtype == "EMBED") {
+            elemtype = 'TEXT';
+        }
+
+        if (e.ctrlKey) {
+            var key;
+            if (window.event)
+                key = window.event.keyCode;     //IE
+            else
+                key = e.which;     //firefox (97)
+
+                
+
+            //if (key != 17) alert(key);
+            if (elemtype != 'TEXT' && (key == 123 || key == 97 || key == 65 || key == 67 || key == 99 || key == 88 || key == 120 || key == 26 || key == 85 || key == 86 || key == 83 || key == 43 || key == 73)) {
+                if (wccp_free_iscontenteditable(e)) return true;
+                show_wpcp_message('You are not allowed to copy content or view source');
+                return false;
+            } else
+                return true;
+        }
+    }
+
+
+    /*For contenteditable tags*/
+    function wccp_free_iscontenteditable(e) {
+        var e = e || window.event; // also there is no e.target property in IE. instead IE uses window.event.srcElement
+
+        var target = e.target || e.srcElement;
+
+        var elemtype = e.target.nodeName;
+
+        elemtype = elemtype.toUpperCase();
+
+        var iscontenteditable = "false";
+
+        if (typeof target.getAttribute != "undefined") iscontenteditable = target.getAttribute("contenteditable"); // Return true or false as string
+
+        var iscontenteditable2 = false;
+
+        if (typeof target.isContentEditable != "undefined") iscontenteditable2 = target.isContentEditable; // Return true or false as boolean
+
+        if (target.parentElement.isContentEditable) iscontenteditable2 = true;
+
+        if (iscontenteditable == "true" || iscontenteditable2 == true) {
+            if (typeof target.style != "undefined") target.style.cursor = "text";
+
+            return true;
+        }
+    }
+
+    ////////////////////////////////////
+    function disable_copy(e) {
+        var e = e || window.event; // also there is no e.target property in IE. instead IE uses window.event.srcElement
+
+        var elemtype = e.target.tagName;
+
+        elemtype = elemtype.toUpperCase();
+
+        if (elemtype == "TEXT" || elemtype == "TEXTAREA" || elemtype == "INPUT" || elemtype == "PASSWORD" || elemtype == "SELECT" || elemtype == "OPTION" || elemtype == "EMBED") {
+            elemtype = 'TEXT';
+        }
+
+        if (wccp_free_iscontenteditable(e)) return true;
+
+        var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+
+        var checker_IMG = '';
+        if (elemtype == "IMG" && checker_IMG == 'checked' && e.detail >= 2) { show_wpcp_message(alertMsg_IMG); return false; }
+        if (elemtype != "TEXT") {
+            if (smessage !== "" && e.detail == 2)
+                show_wpcp_message(smessage);
+
+            if (isSafari)
+                return true;
+            else
+                return false;
+        }
+    }
+
+    //////////////////////////////////////////
+    function disable_copy_ie() {
+        var e = e || window.event;
+        var elemtype = window.event.srcElement.nodeName;
+        elemtype = elemtype.toUpperCase();
+        if (wccp_free_iscontenteditable(e)) return true;
+        if (elemtype == "IMG") { show_wpcp_message(alertMsg_IMG); return false; }
+        if (elemtype != "TEXT" && elemtype != "TEXTAREA" && elemtype != "INPUT" && elemtype != "PASSWORD" && elemtype != "SELECT" && elemtype != "OPTION" && elemtype != "EMBED") {
+            return false;
+        }
+    }
+    function reEnable() {
+        return true;
+    }
+    document.onkeydown = disableEnterKey;
+    document.onselectstart = disable_copy_ie;
+    if (navigator.userAgent.indexOf('MSIE') == -1) {
+        document.onmousedown = disable_copy;
+        document.onclick = reEnable;
+    }
+    function disableSelection(target) {
+        //For IE This code will work
+        if (typeof target.onselectstart != "undefined")
+            target.onselectstart = disable_copy_ie;
+
+        //For Firefox This code will work
+        else if (typeof target.style.MozUserSelect != "undefined") { target.style.MozUserSelect = "none"; }
+
+        //All other  (ie: Opera) This code will work
+        else
+            target.onmousedown = function () { return false }
+        target.style.cursor = "default";
+    }
+    //Calling the JS function directly just after body load
+    window.onload = function () { disableSelection(document.body); };
+
+    //////////////////special for safari Start////////////////
+    var onlongtouch;
+    var timer;
+    var touchduration = 1000; //length of time we want the user to touch before we do something
+
+    var elemtype = "";
+    function touchstart(e) {
+        var e = e || window.event;
+        // also there is no e.target property in IE.
+        // instead IE uses window.event.srcElement
+        var target = e.target || e.srcElement;
+
+        elemtype = window.event.srcElement.nodeName;
+
+        elemtype = elemtype.toUpperCase();
+
+        if (!wccp_pro_is_passive()) e.preventDefault();
+        if (!timer) {
+            timer = setTimeout(onlongtouch, touchduration);
+        }
+    }
+
+    function touchend() {
+        //stops short touches from firing the event
+        if (timer) {
+            clearTimeout(timer);
+            timer = null;
+        }
+        onlongtouch();
+    }
+
+    onlongtouch = function (e) { //this will clear the current selection if anything selected
+
+        if (elemtype != "TEXT" && elemtype != "TEXTAREA" && elemtype != "INPUT" && elemtype != "PASSWORD" && elemtype != "SELECT" && elemtype != "EMBED" && elemtype != "OPTION") {
+            if (window.getSelection) {
+                if (window.getSelection().empty) {  // Chrome
+                    window.getSelection().empty();
+                } else if (window.getSelection().removeAllRanges) {  // Firefox
+                    window.getSelection().removeAllRanges();
+                }
+            } else if (document.selection) {  // IE?
+                document.selection.empty();
+            }
+            return false;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+        window.addEventListener("touchstart", touchstart, false);
+        window.addEventListener("touchend", touchend, false);
+    });
+
+    function wccp_pro_is_passive() {
+
+        var cold = false,
+            hike = function () { };
+
+        try {
+            const object1 = {};
+            var aid = Object.defineProperty(object1, 'passive', {
+                get() { cold = true }
+            });
+            window.addEventListener('test', hike, aid);
+            window.removeEventListener('test', hike, aid);
+        } catch (e) { }
+
+        return cold;
+    }
+/*special for safari End*/</script>
+    <script>
+        document.ondragstart = function(){
+            return false;
+        }
+        document.oncontextmenu = function(e){
+            return false;
+        }
+    </script> -->
 
 </head>
 
 <body>
-
-	<hbToolbar>
-		<hbLogo>
-			<hbText>eFortsHub</hbText>
-		</hbLogo>
-
-		<hbMenu id="menu">
-			<ul>
-				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="#">Home</a>
-				</li>
-
-				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="services">Services</a>
-				</li>
+    <div class="dark-blue-bg">
 
 
-				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="#">Product</a>
-				</li>
+        <!-- main header start here -->
 
-				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="#">About</a>
-				</li>
+        <div class=" header-wrapper dark-blue-content">
 
-				<li>
-					<button class="hire">Hire Now</button>
-				</li>
-			</ul>
+            <div class="container">
 
-		</hbMenu>
+                <div class="main-header ">
 
-		<hbToggle>
-			<button id="toggleBtn">☰</button>
-		</hbToggle>
+                    <div class="left-header-wrapper">
 
-	</hbToolbar>
+
+                    </div>
+                    <div class="right-header-wrapper">
+
+                        <input type="checkbox" id="setting-checkbox">
+
+                        <label for="setting-checkbox">
+                            <i class="fa fa-cog dark-blue-content dark-blue-text-2" id="setting-open"></i>
+                            <i class="fa fa-times dark-blue-content dark-blue-text-2" id="setting-close"></i>
+                        </label>
 
 
 
+                        <!-- side bar start here -->
+
+                        <!-- left side bar start here -->
+                        <div id="left-sidebar" class="left-sidebar">
+                            
+                        </div>
+
+                        <!-- left side bar stop here -->
 
 
-	<div style="display: flex;
-	width: 100%;
-    background-color: #ffb700;
-    position: relative; 
-    overflow: auto;
-    justify-content: space-evenly;
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-	">
+                        <!-- right side bar start here -->
+                        <div id="right-sidebar" class="right-sidebar dark-blue-bg">
 
-		<img style="float: left; width: 45vw;" src="assets/images/bg.png">
-		<div style="float: right;width: fit-content; height: 100%;">
-			<div style="text-align: center;">
+                            <h4 class="dark-blue-text-2"><b>Settings</b></h4>
+                            <br>
+                            <ul>
+                                <li><a href="#" class="dark-blue-text-2"> Themes </a></li>
+                                <div id="forTheme" class="forTheme">
+                                    <!-- Themes Button will be listed here.... -->
 
-				<h2>Do hire us and let your thoughts become true</h2>
-				<br>
-				<a class="btn btn-dark" href="#">Hire Us Now</a>
+                                </div>
+                                <li><a href="#" class="dark-blue-text-2">Home</a></li>
 
+                            </ul>
 
-			</div>
-		</div>
-	</div>
+                        </div>
+                        <!-- right side bar stop here -->
 
+                        <!-- side bar stop here -->
 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main header stop here -->
 
 
+        <div class="container">
+            <!-- 
+            <div id="wpcp-error-message" class="msgmsg-box-wpcp warning-wpcp hideme"><span>Alert: </span>Content is protected !!
+            </div>
+            <script>var timeout_result;
+                function show_wpcp_message(smessage) {
+                    if (smessage !== "") {
+                        var smessage_text = '<span>Alert: </span>' + smessage;
+                        document.getElementById("wpcp-error-message").innerHTML = smessage_text;
+                        document.getElementById("wpcp-error-message").className = "msgmsg-box-wpcp warning-wpcp showme";
+                        clearTimeout(timeout_result);
+                        timeout_result = setTimeout(hide_message, 3000);
+                    }
+                }
+                function hide_message() {
+                    document.getElementById("wpcp-error-message").className = "msgmsg-box-wpcp warning-wpcp hideme";
+                }</script> -->
 
-	<div id="footer">
+
+            <h1 class="text-center dark-blue-text-2"> Bismillahir Rahmanir Rahim </h1>
 
 
-		<div class="footer_item center">
-			<h1 style="color: white;">eFortsHub</h1>
-			<br>
-			<p style="color: white;">Let us bring your service to the forefront of the world. Start working together
-				to create a great product</p>
+            <div id="quran_list" class="row whole-item-wraper">
+                <!-- Surah or Ayah will be listed here -->
 
-			<br>
-			<a id="btn_get_in_touch_footer" style="color: white; " href="#">Get in Touch &#10230;</a>
-		</div>
 
-		<div class="footer_item center wrap">
-			<div style="width: max-content; text-align: justify;">
-				<h3 style="color: white;">Business Hours</h3>
-				<div style="background-color: tomato; width: 20px; height: 2px;"></div>
-				<br>
-				<h4 style="color: white;">Opening Days:</h4>
-				<br>
-				<p style="color: white;">Saturday - Wednessday :9am to 8pm</p>
-				<br>
 
-				<p style="color: white;">Thursday :9am to 4pm</p>
 
-				<br>
 
-				<p style="color: white;">[Bangladesh estimated time]</p>
-				<br>
 
-				<br>
-				<h4 style="color: white;">Vacations:</h4>
-				<br>
-				<p style="color: white;">All Fridays</p>
-				<br>
 
-				<p style="color: white;">All Official Holidays</p>
 
-			</div>
-		</div>
-		<div class="footer_item">
 
-			<div class="find_us" style="width: max-content; text-align: justify;">
-				<h3 style="color: white;">Find us</h3>
-				<div style="background-color: tomato; width: 20px; height: 2px;"></div>
-				<br>
-				<h4 style="color: white;">eFortsHub:</h4>
-				<a target="_blank" href="https://github.com/efortshub">GitHub</a>
-				<br>
-				<a target="_blank" href="https://efortshub.tumblr.com">Tumblr</a>
-				<br>
-				<a target="_blank" href="https://www.linkedin.com/company/efortshub">LinkedIn</a>
-				<br>
-				<a target="_blank" href="https://twitter.com/efortshub">Twitter</a>
-				<br>
-				<a target="_blank" href="https://www.facebook.com/eFortsHub">Facebook</a>
-				<br>
-				<a target="_blank" href="https://www.instagram.com/efortshub">Instagram</a>
-				<br>
-				<a target="_blank" href="https://www.youtube.com/channel/UCaehDsTiUtXSaaT-6f4H6VA">YouTube</a>
-				<br>
+            </div>
+        </div>
+    </div>
 
-				<a target="_blank" href="https://www.hackerrank.com/eFortsHub">HackerRank</a>
-				<br>
 
-				<br>
-				<h4 style="color: white;">Email:</h4>
-				<br>
-				
-				<a class="mail" target="_blank" href="mailto:contact@efortshub.com">contact@efortshub.com</a>
-				<br>
+    <script src="qran.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
 
-				<a class="mail" target="_blank" href="mailto:contact.efortshub@gmail.com">contact.efortshub@gmail.com</a>
-				<br>
-
-			</div>
-		
-
-		</div>
-
-	</div>
-
-	<div style="width: 100%; text-align: end; padding: 25px; background-color:  rgb(37, 37, 37);">
-		<font style="color: white;">Copyright &copy; <font id="year"></font> - eFortsHub. All right reserved</font> 
-	</div>
-
-	<script type="text/javascript" src="assets/js/index.js"></script>
 </body>
 
 </html>

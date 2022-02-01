@@ -28,11 +28,13 @@
   position: fixed;
   z-index: 5;
   transition-duration: 0.5s;
-  padding: 16px;
+  
   font-weight: bold;
   height: 100%;
   border-radius: 0 20px 0 0;
   border: 1px solid grey;
+  /* overflow-y: scroll;
+  bottom: 0; */
 }
 
 .right-sidebar {
@@ -145,7 +147,17 @@
     padding: 16px;
     font-weight: bold;
     height: 100%;
+    
+    
   }
+}
+
+.leftSurahScroller{
+  overflow-y: scroll;
+  bottom: 0;
+  z-index: 6;
+  position: static;
+  height: 100%;
 }
 
 
@@ -166,6 +178,9 @@ label i {
   font-size: 28px;
 }
 
+label i#setting-open {
+  border-radius: 10px;
+}
 label #setting-open {
   z-index: 11;
   display: block;
@@ -208,8 +223,9 @@ label #setting-close {
 
 label #surahs-open {
   z-index: 11;
-  display: block;
-  visibility: visible;
+  align-items: center;
+  padding-right: 10px;
+  
 }
 
 
@@ -288,23 +304,127 @@ label #surahs-close {
   cursor: pointer;
 }
 
-/* .sidebar h4 {
-  padding: 15px 40px;
-  margin-top: 20px;
-  font-size: 13px;
-  letter-spacing: 1px;
-  font-weight: bolder;
+
+
+/* left sidebar items start */
+
+.surah-wrapper{
+  margin:15px 10px;
+  border-radius: 10px;
+  position: relative;
+  padding: 17px 0px;
+  
 }
 
-.sidebar a {
-  width: 100%;
-  box-sizing: border-box;
-  padding-left: 40px;
-  font-size: 15px;
-  line-height: 40px;
-  text-decoration: none;
+
+.surah-count{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  position: absolute;
+  top: 23px;
+  left: 10px;
 }
 
-.sidebar a:hover {
-  text-decoration: none;
-} */
+.surah-wrapper h4{
+  font-size: 22px;
+  margin-top: -5px;
+  margin-left: 50px;
+}
+
+.surah-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.surah-wrapper p{
+   margin-left: 50px;
+   margin-top: -5px;
+}
+
+.surah-wrapper h3{
+  padding-right: 10px;
+  margin-top: 1px;
+}
+
+#surahs-open h4{
+  font-weight: bold;
+  
+}
+
+#surahs-open p{
+  margin-top: -5px;
+}
+.hide-me {
+  visibility: hidden;
+  display: none;
+}
+.show-me{
+  visibility: visible;
+  display:flex;
+}
+.half-round{
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+.singleSurahNameWrap{
+  cursor: pointer;
+}
+
+
+
+/* left sidebar items end */
+
+
+
+/* ayah start  */
+
+.ayah{
+  border-bottom: 1px solid grey;
+}
+
+.flex-ayah-icon{
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  padding: 20px;
+  
+  
+}
+.first{
+  display:flex;
+  cursor: pointer;
+}
+
+.first div{
+  margin:0px 10px;
+}
+
+.play-icon i{
+   font-size: 28px;
+   
+}
+.last{
+  cursor: pointer;
+}
+
+.ayah-content{
+  font-size: 18px;
+}
+
+.ayah-content .arabic-ayah{
+  text-align: right !important;
+  font-size: 25px;
+}
+
+.half-round{
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+/* ayah end  */

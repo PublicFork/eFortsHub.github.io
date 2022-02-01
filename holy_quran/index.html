@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="quran_header.css">
     <link rel="stylesheet" href="quran.css">
 
+    <!-- required to load all functions at startup -->
+    <script src="./functions.js"></script>
+    <script src="./themes.js"></script>
 
 
     <!--    
@@ -223,12 +226,12 @@
 </head>
 
 <body>
-    <div class="dark-blue-bg">
+    <div class="main-bg">
 
 
         <!-- main header start here -->
 
-        <div class=" header-wrapper dark-blue-content">
+        <div class=" header-wrapper main-content">
 
             <div class="container">
 
@@ -238,29 +241,44 @@
                         <input type="checkbox" id="surahs-checkbox">
 
                         <label for="surahs-checkbox">
-                            <i class="fa fa-cog dark-blue-content dark-blue-text-2" id="surahs-open"></i>
-                            <i class="fa fa-times dark-blue-content dark-blue-text-2" id="surahs-close"></i>
+                            <div class="singleSurahNameWrap half-round hide-me main-bg main-text-2" id="surahs-open">
+
+                                <div class="angleArrow">
+                                    <i class="fa fa-angle-right"></i> 
+                                </div>
+                                <div class="surahNameAndTrnslt">
+                                    <font id="single_surah_title"></font>
+                                    <br>
+                                <font id="signleSurahTr"></font>
+                                </div>
+                            </div>
+
+                            
+                            <i class="fa fa-times main-content main-text-2" id="surahs-close"></i>
                         </label>
 
 
                         <!-- left side bar start here -->
-                        <div id="left-sidebar" class="left-sidebar dark-blue-bg">
+                        <div id="left-sidebar" class="left-sidebar main-bg">
 
                             <div style="
                                 display: flex;
                                 flex-direction: row;
                                 align-items: flex-end;
                                 justify-content: flex-end;">
-                                 <h4 class="dark-blue-text-2 right"><b>Holy Quran</b></h4>
+                                 <h4 class="main-text-2 right"><b>Holy Quran</b></h4>
                             </div>
                            
                             <!-- surah list goes here -->
 
+                           
+                            <div class="leftSurahScroller">
+                                <div id="leftSidebarSurahList">
+
+                                </div>
+                            </div>
+
                             
-
-
-
-
 
 
 
@@ -270,27 +288,27 @@
 
                     <!-- left header wrapper end -->
 
-                    <div class="right-header-wrapper">
+                    <div class="right-header-wrapper ">
 
                         <input type="checkbox" id="setting-checkbox">
 
                         <label for="setting-checkbox">
-                            <i class="fa fa-cog dark-blue-content dark-blue-text-2" id="setting-open"></i>
-                            <i class="fa fa-times dark-blue-content dark-blue-text-2" id="setting-close"></i>
+                            <i class="fa fa-cog main-bg main-text-2" id="setting-open"></i>
+                            <i class="fa fa-times main-content main-text-2" id="setting-close"></i>
                         </label>
 
                         <!-- right side bar start here -->
-                        <div id="right-sidebar" class="right-sidebar dark-blue-bg">
+                        <div id="right-sidebar" class="right-sidebar main-bg">
 
-                            <h4 class="dark-blue-text-2"><b>Settings</b></h4>
+                            <h4 class="main-text-2"><b>Settings</b></h4>
                             <br>
                             <ul>
-                                <li><a href="#" class="dark-blue-text-2"> Themes </a></li>
+                                <li><a href="#" class="main-text-2"> Themes </a></li>
                                 <div id="forTheme" class="forTheme">
                                     <!-- Themes Button will be listed here.... -->
 
                                 </div>
-                                <li><a href="#" class="dark-blue-text-2">Home</a></li>
+                                <li><a href="#" class="main-text-2">Home</a></li>
 
                             </ul>
 
@@ -324,7 +342,7 @@
                 }</script> -->
 
 
-            <h1 class="text-center dark-blue-text-2"> Bismillahir Rahmanir Rahim </h1>
+            <h1 class="text-center main-text-2"> Bismillahir Rahmanir Rahim </h1>
 
 
             <div id="quran_list" class="row whole-item-wraper">

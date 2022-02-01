@@ -1,68 +1,32 @@
-/*dark blue theme-------  */
-
-.dark-blue-bg {
-  background: rgb(1, 19, 22);
+html {
+  --main-bg: rgb(1, 39, 62);
+  --main-content: #195f70;
+  --main-text: white;
+  --main-text-2: rgb(122, 218, 235);
 }
 
-.dark-blue-content {
-  background: #195f70;
+.main-bg {
+  background-color: var(--main-bg);
 }
-.abcd{
-  filter: invert(26%) sepia(91%) saturate(394%) hue-rotate(145deg) brightness(96%) contrast(90%);
+.main-content {
+  background-color: var(--main-content);
 }
-
-.dark-blue-text {
-  color: white;
+.main-text {
+  color: var(--main-text);
 }
-
-.dark-blue-text-2 {
-  color: rgb(122, 218, 235);
+.main-text-2 {
+  color: var(--main-text-2);
 }
 
-/*dark orange theme-------  */
-
-.dark-orange-bg {
-  background: rgb(82, 37, 16);
-}
-.dark-orange-content {
-  background: rgb(192, 73, 29);
-}
-.dark-orange-text {
-  color: white;
-}
-.dark-orange-text-2 {
-  color: rgb(241, 188, 127);
+::-webkit-scrollbar-thumb {
+  border-radius: 16px;
+  background: var(--main-content);
+} 
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: var(--main-bg);
 }
 
-/*dark green theme-------  */
-
-.dark-green-bg {
-  background: rgb(16, 65, 23);
-}
-.dark-green-content {
-  background: rgb(21, 158, 39);
-}
-.dark-green-text {
-  color: rgb(255, 255, 255);
-}
-.dark-green-text-2 {
-  color: rgb(136, 241, 127);
-}
-
-/*light green theme-------  */
-
-.light-green-bg {
-  background: rgb(193, 226, 198);
-}
-.light-green-content {
-  background: rgb(76, 179, 90);
-}
-.light-green-text {
-  color: rgb(0, 0, 0);
-}
-.light-green-text-2 {
-  color: rgb(15, 48, 12);
-}
 
 .round {
   width: 30px;
@@ -111,44 +75,47 @@
   align-self: center;
 }
 
-
 #wpcp-error-message {
-    direction: ltr;
-    text-align: center;
-    transition: opacity .9s ease 0s;
-    z-index: 99999999;
+  direction: ltr;
+  text-align: center;
+  transition: opacity 0.9s ease 0s;
+  z-index: 99999999;
 }
 .warning-wpcp {
-    background: #ffecec url(https://agrobd24.com/wp-content/plugins/wp-content-copy-protector/images/warning.png) no-repeat 10px 50%;
+  background: #ffecec
+    url(https://agrobd24.com/wp-content/plugins/wp-content-copy-protector/images/warning.png)
+    no-repeat 10px 50%;
 }
 .msgmsg-box-wpcp {
-    border: 1px solid #f5aca6;
-    border-radius: 10px;
-    color: #555;
-    font-family: Tahoma;
-    font-size: 11px;
-    margin: 10px;
-    padding: 10px 36px;
-    position: fixed;
-    width: 255px;
-    top: 50%;
-    left: 50%;
-    margin-top: -10px;
-    margin-left: -130px;
-    -webkit-box-shadow: 0 0 34px 2px #f2bfbf;
-    -moz-box-shadow: 0 0 34px 2px #f2bfbf;
-    box-shadow: 0 0 34px 2px #f2bfbf;
+  border: 1px solid #f5aca6;
+  border-radius: 10px;
+  color: #555;
+  font-family: Tahoma;
+  font-size: 11px;
+  margin: 10px;
+  padding: 10px 36px;
+  position: fixed;
+  width: 255px;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -130px;
+  -webkit-box-shadow: 0 0 34px 2px #f2bfbf;
+  -moz-box-shadow: 0 0 34px 2px #f2bfbf;
+  box-shadow: 0 0 34px 2px #f2bfbf;
 }
 .hideme {
-    opacity: 0;
-    visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
 }
-*, *:before, *:after {
-    box-sizing: border-box;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 .unselectable {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    cursor: default;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
 }
