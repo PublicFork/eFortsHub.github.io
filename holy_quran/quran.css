@@ -1,67 +1,24 @@
 /*dark blue theme-------  */
 
-.dark-blue-bg{
-  background: rgb(1, 19, 22);
+html{
+  --main-bg: rgb(1, 19, 22);
+  --main-content: #195f70;
+  --main-text: white;
+  --main-text-2: rgb(122, 218, 235);
 }
-
-.dark-blue-content {
-  background: #195f70;
+ 
+.main-bg {
+  background-color: var(--main-bg);
 }
-
-.dark-blue-text {
-  color: white;
+.main-content {
+  background-color: var(--main-content);
 }
-
-.dark-blue-text-2 {
-  color: rgb(122, 218, 235);
+.main-text {
+  color: var(--main-text);
 }
-
-/*dark orange theme-------  */
-
-.dark-orange-bg {
-  background:rgb(82, 37, 16);
-}
-.dark-orange-content {
-  background: rgb(192, 73, 29);
-}
-.dark-orange-text {
-  color: white;
-}
-.dark-orange-text-2 {
-  color: rgb(241, 188, 127);
-}
-
-
-/*dark green theme-------  */
-
-.dark-green-bg {
-  background:rgb(16, 65, 23);
-}
-.dark-green-content {
-  background: rgb(21, 158, 39);
-}
-.dark-green-text {
-  color: rgb(255, 255, 255);
-}
-.dark-green-text-2 {
-  color: rgb(136, 241, 127);
-}
-
-
-/*light green theme-------  */
-
-.light-green-bg {
-  background:rgb(193, 226, 198);
-}
-.light-green-content {
-  background: rgb(76, 179, 90);
-}
-.light-green-text {
-  color: rgb(0, 0, 0);
-}
-.light-green-text-2 {
-  color: rgb(15, 48, 12);
-}
+.main-text-2 {
+  color: var(--main-text-2);
+} 
 
 
 .round {
@@ -74,13 +31,7 @@
   text-align: center;
   font-size: 14px;
   margin-left: -12px;
- 
 }
-
-
-
-
-
 
 /* botstrap design er code */
 .items-wrapper {
@@ -95,10 +46,8 @@
   align-content: center;
   text-align: center;
   justify-content: space-between;
-
-
 }
-#btnTh{
+#btnTh {
   padding: 8px;
   border-radius: 8px;
 }
@@ -120,202 +69,43 @@
 }
 
 
-/*---------------Navbar Start-------------*/
-
-
-@media screen and (min-width: 860px){
-  
-.sidebar{
-  height:100vh;
-  position:fixed;
-  width:30vw;
-  transition-duration:.5s;
-  z-index:2000;
-  right:-300px;
-  top:0px;
-  font-weight:bold;
+#wpcp-error-message {
+    direction: ltr;
+    text-align: center;
+    transition: opacity .9s ease 0s;
+    z-index: 99999999;
+}
+.warning-wpcp {
+    background: #ffecec url(https://agrobd24.com/wp-content/plugins/wp-content-copy-protector/images/warning.png) no-repeat 10px 50%;
+}
+.msgmsg-box-wpcp {
+    border: 1px solid #f5aca6;
+    border-radius: 10px;
+    color: #555;
+    font-family: Tahoma;
+    font-size: 11px;
+    margin: 10px;
+    padding: 10px 36px;
+    position: fixed;
+    width: 255px;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -130px;
+    -webkit-box-shadow: 0 0 34px 2px #f2bfbf;
+    -moz-box-shadow: 0 0 34px 2px #f2bfbf;
+    box-shadow: 0 0 34px 2px #f2bfbf;
+}
+.hideme {
+    opacity: 0;
+    visibility: hidden;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
 }
 
+.unselectable {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
 }
-@media screen and (min-width: 720px){
-  
-.sidebar{
-  height:100vh;
-  position:fixed;
-  width:45vw;
-  transition-duration:.5s;
-  z-index:2000;
-  right:-300px;
-  top:0px;
-  font-weight:bold;
-}
-
-}
-@media screen and (min-width: 5px){
-  
-.sidebar{
-  height:100vh;
-  position:fixed;
-  width:90vw;
-  transition-duration:.5s;
-  z-index:2000;
-  right:-300px;
-  top:0px;
-  font-weight:bold;
-}
-
-}
-
-.sidebar{
-  height:100vh;
-  position:fixed;
-  width:320px;
-  transition-duration:.5s;
-  z-index:2000;
-  right:-300px;
-  top:0px;
-  font-weight:bold;
-}
-
-
-.sidebar h4{
-  padding:15px 40px;
-  margin-top:20px;
-  font-size:13px;
-  letter-spacing:1px;
-  font-weight:bolder;
-  
-  
-}
-
-
-.sidebar a{
-  width:100%;
-  box-sizing:border-box;
-  padding-left:40px;
-  font-size:15px;
-  line-height:40px;
-  text-decoration:none;
-}
-
-.sidebar a:hover{text-decoration:none;}
-
-
-/*---------------Developing part--------------+*/
-
-ul{
-  list-style-type: none;
-}
-
-li a{
- 
-  margin-left: -40px;
-}
-
-#check{display:none;}
-
-
-label #bars,label #close{
-  position:absolute;
-  padding:15px;
-  cursor: pointer;
-  transition-duration:.5s;
-  border-radius: 0px 10px;
-  
-}
-
-
-label #bars{
-  right:20px;
-  top:20px;
-  font-size:20px;
-  z-index:98;
-  position:fixed;
-  padding:10px;
-  
-}
-
-
-
-
-label #close{
-  top:20px;
-  z-index:10;
-  /*left:-300px;*/
-  opacity:0;
-  position:fixed;
-  right:20px;
-}
-
-
-#check:checked ~ .sidebar{
-  right:0px;
-}
-
-
-#check:checked ~ label #bars{
-  opacity:0;
-  pointer-events:none;
-}
-
-
-#check:checked ~ label #close{      
-     position:fixed;
-     z-index:105000;
-     opacity:1;
-}
-
-.sidebar li{transition-duration:0.5s;}
-
-
-
-/*---------------Navbar End----------------*/
-
-
-/* for theme */
-
-.forTheme{
-  display: flex;
-  overflow-x: auto;
-  padding-bottom: 10px;
-  cursor: pointer;
-}
-
-.forTheme::-webkit-scrollbar{
-  border-radius: 20px;
-  margin-top: 20px;
-  height: 10px;
-  width: 50% !important;
-}
-
-
-
-/* Track */
-.forTheme::-webkit-scrollbar-track {
-  border-radius: 20px;
-}
-
-/* Handle */
-.forTheme::-webkit-scrollbar-thumb {
-  border-radius:20px;
-}
-
-/* Handle on hover */
-
-.themeItem {  
-  min-height: 100px;
-  margin-right: 20px;
-  min-width: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
-  padding: 5px;
-  border-radius: 10px;
-}
-.themeItem img{
-  width: 100%;
-}
-
-
