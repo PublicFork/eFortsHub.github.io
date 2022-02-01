@@ -37,7 +37,7 @@ function loadSurahListCenter() {
             `</p>
                         </div>
                     </div>
-                    <h3 class="main-text-2">` +
+                    <h3 class="main-text-2 arabic-font">` +
             titleAr +
             `</h3>
                 </div>
@@ -95,7 +95,10 @@ function loadLeftSurahList(button) {
     leftSurahList.innerHTML = leftSurahItem;
 
 
-    document.getElementById(button).style.backgroundColor = '#dddddd50'
+    document.getElementById(button).style.backgroundColor = `var(--main-bg)`;
+
+    document.getElementById(button).style.border = `1px solid var(--main-content)`;
+    
 
 
 
@@ -195,7 +198,7 @@ function loadSurahsIndexClickListener(indexes, selectedTranscript) {
                                     </div>    
                                     <div class="ayah-content">
                                         <div class="arabic-ayah" >
-                                            <font class="main-text">`+ text + `</font>
+                                            <font class="main-text arabic-font">`+ text + `</font>
                                         </div>
                                             <br>   
                                         <font class="main-text">No translation available</font>
