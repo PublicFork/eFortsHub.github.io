@@ -264,6 +264,8 @@ function loadSurahsIndexClickListener(indexes, selectedTranscript) {
 function setLoadingInUI() {
     var loader = document.getElementById("loader-bg");
     loader.style.visibility = 'visible';
+
+    document.getElementById("ayah-context-menu").style.visibility = 'hidden';
 }
 
 
