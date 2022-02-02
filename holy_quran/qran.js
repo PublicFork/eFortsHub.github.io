@@ -12,6 +12,8 @@ let currentSurah = '';
 let currentIndex;
 let indexes = [];
 
+setLoadingInUI();
+
 loadThemeSettings();
 fetch("./api/surah.json")
   .then((response) => response.json())
@@ -20,7 +22,16 @@ fetch("./api/surah.json")
     loadSurahListCenter();
     loadSurahsIndexClickListener(indexes, selectedTranscript);
     initDefaultSettings();
+    hideLoadingInUI();
   });
+
+
+// const loader = document.querySelector(".preloader");
+// window.addEventListener("load", function () {
+//   setTimeout(() => {
+//     loader.style.display = 'none';
+//   }, 1000);
+// })
 
 
 

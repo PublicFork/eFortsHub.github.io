@@ -32,7 +32,6 @@
   src: url("/fonts/arabic/noorehira.ttf");
 }
 
-
 html {
   --main-bg: rgb(1, 39, 62);
   --main-content: #195f70;
@@ -67,6 +66,13 @@ html {
   width: 10px;
   background-color: var(--main-bg);
   cursor: grabbing;
+}
+
+li {
+  list-style-type: none;
+}
+a:hover {
+  text-decoration: none;
 }
 
 .round {
@@ -159,4 +165,117 @@ html {
   -moz-user-select: none;
   -webkit-user-select: none;
   cursor: default;
+}
+
+/*--------for Preloader star------*/
+
+.loader-bg {
+  background: var(--main-bg);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 9999999;
+  visibility: hidden;
+}
+/* 
+.loader-bg .loader_active{
+  visibility: visible;
+} */
+
+.loader {
+  border: 0px solid transparent;
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  border: 10px solid var(--main-content);
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  animation: loader 2s linear infinite;
+  opacity: 0;
+}
+
+.loader::before {
+  animation-delay: 0.5s;
+}
+
+#ayah-context-menu ul {
+  list-style-type: none;
+  text-align: start;
+  justify-content: start;
+  align-content: flex-start;
+  padding: 0;
+}
+
+#ayah-context-menu ul li {
+  text-align: start;
+  left: 0;
+  padding: 6px 100px 6px 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin: 1px;
+}
+
+#ayah-context-menu ul li i{
+  font-size: 16px;
+  padding: 0px 8px;
+
+}
+#ayah-context-menu ul li:hover {
+  background-color: rgb(145, 145, 145);
+  cursor: pointer;
+  user-select: none;
+}
+
+#ayah-context-menu #cancel {
+  text-align: end;
+  align-content: flex-end;
+  justify-content: flex-end;
+  align-self: flex-end;
+  width: fit-content;
+  padding: 8px 12px;
+  color: var(--main-text);
+  font-size: 12px;
+}
+#ayah-context-menu #cancel:hover {
+  text-align: end;
+  font-size: 14px;
+  background-color: grey;
+  cursor: pointer;
+}
+#ayah-context-menu {
+  padding-top: 8px;
+  position: fixed;
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  width: max-content;
+  border: 1px solid var(--main-content);
+  background-color: var(--main-bg);
+  color: var(--main-text);
+  border-radius: 4px;
+}
+#ayah-context-menu font {
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+}
+#ayah-context-menu #fxx {
+  font-size: small;
+  text-align: center;
+  padding: 16px;
+  color: var(--main-text-2);
 }
