@@ -302,7 +302,7 @@ function loadRightClickContextMenu(sura, content) {
             document.getElementById("ayah-context-menu").style.top = mouseY(event) + 'px';
             document.getElementById("ayah-context-menu").style.left = mouseX(event) + 'px';
         
-            alert(mouseX(event)+'px ,   '+mouseY(event)+'px ');
+          //  alert(mouseX(event)+'px ,   '+mouseY(event)+'px ');
 
 
         });
