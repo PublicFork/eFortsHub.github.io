@@ -211,6 +211,22 @@ a:hover {
   animation-delay: 0.5s;
 }
 
+/* context menu style start here */
+
+#ayah-context-menu {
+  z-index: 9999;
+  padding: 8px;
+  transition: 0ms;
+  position: fixed;
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  width: max-content;
+  border: 1px solid var(--main-content);
+  background-color: var(--main-bg);
+  color: var(--main-text);
+  border-radius: 8px;
+}
 #ayah-context-menu ul {
   list-style-type: none;
   text-align: start;
@@ -219,9 +235,11 @@ a:hover {
   padding: 0;
 }
 
+
 #ayah-context-menu ul li {
   text-align: start;
   left: 0;
+  border: 1px solid var(--main-bg);
   padding: 6px 100px 6px 4px;
   display: flex;
   flex-direction: row;
@@ -229,15 +247,17 @@ a:hover {
   margin: 1px;
 }
 
-#ayah-context-menu ul li i{
+#ayah-context-menu ul li i {
   font-size: 16px;
   padding: 0px 8px;
-
 }
 #ayah-context-menu ul li:hover {
-  background-color: rgb(145, 145, 145);
+  background-color: var(--main-content);
+  color: var(--main-bg);
+  border: 1px solid var(--main-text-2);
   cursor: pointer;
   user-select: none;
+  border-radius: 8px;
 }
 
 #ayah-context-menu #cancel {
@@ -247,26 +267,17 @@ a:hover {
   align-self: flex-end;
   width: fit-content;
   padding: 8px 12px;
+  border: 1px solid var(--main-bg);
   color: var(--main-text);
   font-size: 12px;
 }
 #ayah-context-menu #cancel:hover {
   text-align: end;
-  font-size: 14px;
-  background-color: grey;
+  background-color: var(--main-content);
+  color: var(--main-bg);
+  border: 1px solid var(--main-text-2);
+  border-radius: 8px;
   cursor: pointer;
-}
-#ayah-context-menu {
-  padding-top: 8px;
-  position: fixed;
-  display: flex;
-  visibility: hidden;
-  flex-direction: column;
-  width: max-content;
-  border: 1px solid var(--main-content);
-  background-color: var(--main-bg);
-  color: var(--main-text);
-  border-radius: 4px;
 }
 #ayah-context-menu font {
   font-weight: bold;
@@ -279,3 +290,5 @@ a:hover {
   padding: 16px;
   color: var(--main-text-2);
 }
+
+/* context menu style end here  */

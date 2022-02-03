@@ -175,8 +175,10 @@ function loadSurahsIndexClickListener(indexes, selectedTranscript) {
                             const id = element.id;
                             const verse_key = element.verse_key;
                             const verse = verse_key.replace(sura + ':', '');
-                            const text = element.text;
+                            let text = element.text;
 
+                            text = getGunnahMatcher(text);
+                            
 
                             surahInnerCode = surahInnerCode +
                                 `
@@ -262,11 +264,12 @@ function loadSurahsIndexClickListener(indexes, selectedTranscript) {
 
 
 function setLoadingInUI() {
+       document.getElementById("ayah-context-menu").style.visibility = 'hidden';
+
     var loader = document.getElementById("loader-bg");
     loader.style.visibility = 'visible';
 
-    document.getElementById("ayah-context-menu").style.visibility = 'hidden';
-}
+ }
 
 
 function hideLoadingInUI() {
@@ -280,7 +283,7 @@ function initDefaultSettings() {
 }
 
 function loadRightClickContextMenu(sura, content) {
-
+   
     content.forEach(element => {
 
         const id = element.id;
@@ -298,8 +301,12 @@ function loadRightClickContextMenu(sura, content) {
             const event = window.event;
             document.getElementById("ayah-context-menu").style.top = mouseY(event) + 'px';
             document.getElementById("ayah-context-menu").style.left = mouseX(event) + 'px';
-        });
+        
+            alert(mouseX(event)+'px ,   '+mouseY(event)+'px ');
 
+
+        });
+     
 
 
 

@@ -5,6 +5,7 @@ const themes = [
         'content': '#195f70',
         'text': 'rgb(255, 255, 255)',
         'text-2': 'rgb(122, 218, 235)'
+        
 
      }, 
     {
