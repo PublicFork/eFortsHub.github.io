@@ -19,12 +19,6 @@ let indexes = [];
 
 
 
-var gunnah = getGunnahMatcher();
-
-
-
-
-
 
 
 loadThemeSettings();

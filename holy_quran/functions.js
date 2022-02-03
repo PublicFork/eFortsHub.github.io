@@ -177,9 +177,10 @@ function loadSurahsIndexClickListener(indexes, selectedTranscript) {
                             const verse = verse_key.replace(sura + ':', '');
                             let text = element.text;
 
-                            text = getGunnahMatcher(text);
-                            
 
+
+                            text = getTajweedFilteredText(text);
+                        
                             surahInnerCode = surahInnerCode +
                                 `
                                 <div id="`+ id + `" class="ayah  container">

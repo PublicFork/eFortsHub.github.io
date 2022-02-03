@@ -3,7 +3,7 @@
 //   https://www.facebook.com/hbappihp/
 //   https://www.github.com/hbappi/
 
-const quranmatcher = new RegExp().compile("[01]?\\d?\\d:\\d?\\d?\\d"); //withtout brackets
+//const quranmatcher = new RegExp().compile("[01]?\\d?\\d:\\d?\\d?\\d"); //withtout brackets
 
 //vowels
 const fathah = '\u064e';
@@ -77,11 +77,16 @@ const uthmani_stop_signs = "" + stop_sign_three_dots + stop_sign_zim + stop_sign
 
 
 
+// static String gunnah = "إِنَّهَا عَلَيْهِم مُّؤْصَدَةٌ ";
+//   static String ikhfa = "تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ";
+//  // static String idhgham = " الَّذِي أَطْعَمَهُم مِّن جُوعٍ وَآمَنَهُم مِّنْ خَوْفٍ";
+//  // static String idhghamwithoutgunnah = "وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ";
+//   static String iqlab = "كَذَّبَتْ ثَمُودُ وَعَادٌۢ بِالْقَارِعَةِ";
+//  // static String qalqala = "لَمْ يَلِدْ وَلَمْ يُولَدْ";
+
+
 //matcher
 
-const gunnahmatcher = new RegExp().compile("[" + nun + "|" + mim + "]" + shadda);
-const iqlabmmatcher = new RegExp().compile("[" + high_meem + low_meem + "][" + sukun + curvy_sukun + empty_ya + empty_alif + "]?[" + uthmani_stop_signs + "]?" + space + "?" + ba);
-const qalqalamatcher = new RegExp().compile("[" + qaf + toa + ba + zim + dal + "](" + sukun + "|" + curvy_sukun + "|[^" + ta_marbuta + "]?[^" + ta_marbuta + empty_alif + empty_ya + "]?[^" + ta_marbuta + empty_alif + alif_hamza + "]$)");
 const idhghammatcher = new RegExp().compile("([" + nun + fathatain + dammatain + kasratain + "][" + sukun + curvy_sukun + empty_ya + empty_alif + "]?[" + uthmani_stop_signs + "]?" + space + "[" + nun + mim + another_ya + wow + "]" + shadda + "?)|" + mim + "[" + uthmani_stop_signs + sukun + curvy_sukun + "]?" + space + mim);
 const idhghammatcherwihtoutgunnah = new RegExp().compile("[" + nun + kasratain + fathatain + dammatain + "][" + sukun + curvy_sukun + empty_ya + empty_alif + "]?[" + uthmani_stop_signs + "]?" + space + "[" + ra + lam + "]");
 const ikhfamatcher = new RegExp().compile("([" + nun + kasratain + fathatain + dammatain + "][" + sukun + curvy_sukun + empty_ya + empty_alif + "]?[" + uthmani_stop_signs + "]?" + space + "?[" + soad + zaal + tha + kaf + zim + shin + qaf + seen + dal + toa + zha + fa + ta + doad + zoa + indopak_kaf + "])|" + mim + "[" + sukun + curvy_sukun + "]?" + space + "?" + ba);
@@ -96,7 +101,7 @@ const thicklettermatcher = new RegExp().compile("[" + nun + "|" + mim + "]" + sh
 
 
 
-function getGunnahMatcher(text) {
+function getTajweedFilteredText(text) {
     //  gunnahmatcher.reset(text);
 
     //  while (gunnahmatcher.find()) {
@@ -104,12 +109,42 @@ function getGunnahMatcher(text) {
     //text.setSpan(new ForegroundColorSpan('#f11'), gunnahmatcher.start(), getEnd(s, gunnahmatcher.end()), 0);
     //}
 
-    const nunSadda = nun+shadda;
     //text = ' عَلَيْهِ' + nunSadda + 'عَلَيْهِ' + nunSadda +' عَلَيْهِ' + nunSadda +'عَلَيْه' ;
 
+var output = text;
+
+     output = getGunnahMatchedFilter(text);
 
 
 
 
-    return new String(text).replaceAll(nunSadda, '<font color="red">' + nunSadda +'</font>');
+     return output;
+}
+
+function getGunnahMatchedFilter(text) {
+
+    const nunShadda = nun + shadda;
+    const mimShadda = mim + shadda;
+
+    var result = text;
+
+    result = new String(result).replaceAll(nunShadda, 
+        `<font class="nunshadda">`+nunShadda+`</font>`
+        );
+
+    return result;
+
+}
+function getIqlabMatcher(text) {
+    const iqlabmmatcher = new RegExp().compile("[" + high_meem + low_meem + "][" + sukun + curvy_sukun + empty_ya + empty_alif + "]?[" + uthmani_stop_signs + "]?" + space + "?" + ba);
+
+    
+    
+
+}
+function getQalqalaMatchedFilter(text) {
+    const qalqalamatcher = new RegExp().compile("[" + qaf + toa + ba + zim + dal + "](" + sukun + "|" + curvy_sukun + "|[^" + ta_marbuta + "]?[^" + ta_marbuta + empty_alif + empty_ya + "]?[^" + ta_marbuta + empty_alif + alif_hamza + "]$)");
+
+    
+
 }
