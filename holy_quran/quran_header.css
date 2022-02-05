@@ -4,10 +4,13 @@
 
 .header-wrapper {
   z-index: 5;
-  border-bottom: 1px solid gray;
+  border-bottom: 2px solid var(--main-bg);
   position: sticky;
   position: -webkit-sticky;
   top: 0;
+  right: 0;
+  left: 0;
+  padding: 0;
 }
 
 .main-header {
@@ -28,11 +31,11 @@
   position: fixed;
   z-index: 5;
   transition-duration: 0.5s;
-  
+  padding-right: 8px;
   font-weight: bold;
   height: 100%;
   border-radius: 0 20px 0 0;
-  border: 1px solid grey;
+  border: 1px solid var(--main-content);
   /* overflow-y: scroll;
   bottom: 0; */
 }
@@ -49,7 +52,7 @@
   font-weight: bold;
   height: 100%;
   border-radius: 20px 0 0 0;
-  border: 1px solid grey;
+  border: 1px solid var(--main-content);
 }
 
 @media screen and (max-width: 980px) {
@@ -147,12 +150,10 @@
     padding: 16px;
     font-weight: bold;
     height: 100%;
-    
-    
   }
 }
 
-.leftSurahScroller{
+.leftSurahScroller {
   overflow-y: scroll;
   bottom: 0;
   z-index: 6;
@@ -160,15 +161,11 @@
   height: 100%;
 }
 
-
-
 /* settings style start */
-
 
 #setting-checkbox {
   display: none;
 }
-
 
 label i {
   padding: 8px;
@@ -178,6 +175,9 @@ label i {
   font-size: 28px;
 }
 
+label i#setting-open {
+  border-radius: 10px;
+}
 label #setting-open {
   z-index: 11;
   display: block;
@@ -194,7 +194,6 @@ label #setting-close {
   visibility: hidden;
 }
 
-
 #setting-checkbox:checked ~ label #setting-open {
   z-index: 11;
   visibility: hidden;
@@ -210,6 +209,8 @@ label #setting-close {
   right: 0;
 }
 
+
+
 /* settings style end */
 
 /* surah list style start */
@@ -222,9 +223,7 @@ label #surahs-open {
   z-index: 11;
   align-items: center;
   padding-right: 10px;
-  
 }
-
 
 label #surahs-close {
   transition-duration: 0.9s;
@@ -251,7 +250,7 @@ label #surahs-close {
 #surahs-checkbox:checked ~ .left-sidebar {
   left: 0;
 }
-.right{
+.right {
   align-items: flex-end;
 }
 
@@ -301,20 +300,16 @@ label #surahs-close {
   cursor: pointer;
 }
 
-
-
 /* left sidebar items start */
 
-.surah-wrapper{
-  margin:15px 10px;
+.surah-wrapper {
+  margin: 15px 10px;
   border-radius: 10px;
   position: relative;
   padding: 17px 0px;
-  
 }
 
-
-.surah-count{
+.surah-count {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -328,99 +323,95 @@ label #surahs-close {
   left: 10px;
 }
 
-.surah-wrapper h4{
+.surah-wrapper h4 {
   font-size: 22px;
   margin-top: -5px;
   margin-left: 50px;
 }
 
-.surah-flex{
+.surah-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.surah-wrapper p{
-   margin-left: 50px;
-   margin-top: -5px;
+.surah-wrapper p {
+  margin-left: 50px;
+  margin-top: -5px;
 }
 
-.surah-wrapper h3{
+.surah-wrapper h3 {
   padding-right: 10px;
   margin-top: 1px;
 }
 
-#surahs-open h4{
+#surahs-open h4 {
   font-weight: bold;
-  
 }
 
-#surahs-open p{
+#surahs-open p {
   margin-top: -5px;
 }
 .hide-me {
   visibility: hidden;
   display: none;
 }
-.show-me{
+.show-me {
   visibility: visible;
-  display:flex;
+  display: flex;
 }
-.half-round{
+.half-round {
   border-radius: 5px;
   padding: 2px 5px;
 }
-.singleSurahNameWrap{
+.singleSurahNameWrap {
   cursor: pointer;
 }
 
-
+#leftSidebarSurahList {
+  padding: 8px;
+}
 
 /* left sidebar items end */
 
-
-
 /* ayah start  */
 
-.ayah{
+.ayah {
   border-bottom: 1px solid grey;
 }
 
-.flex-ayah-icon{
+.flex-ayah-icon {
   display: flex;
   justify-content: space-between;
   font-size: 18px;
   padding: 20px;
-  
-  
 }
-.first{
-  display:flex;
+.first {
+  display: flex;
   cursor: pointer;
 }
 
-.first div{
-  margin:0px 10px;
+.first div {
+  margin: 0px 10px;
 }
 
-.play-icon i{
-   font-size: 28px;
-   
+.play-icon i {
+  font-size: 28px;
 }
-.last{
+.last {
   cursor: pointer;
 }
 
-.ayah-content{
+.ayah-content {
   font-size: 18px;
 }
 
-.ayah-content .arabic-ayah{
+.ayah-content .arabic-ayah {
   text-align: right !important;
   font-size: 25px;
 }
 
-.half-round{
+.half-round {
   border-radius: 5px;
   padding: 2px 5px;
 }

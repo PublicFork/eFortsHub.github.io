@@ -37,7 +37,7 @@ function loadSurahListCenter() {
             `</p>
                         </div>
                     </div>
-                    <h3 class="main-text-2">` +
+                    <h3 class="main-text-2 arabic">` +
             titleAr +
             `</h3>
                 </div>
@@ -84,7 +84,7 @@ function loadLeftSurahList(button) {
             `</p>
                         </div>
                     </div>
-                    <h3 class="main-text-2">` +
+                    <h3 class="main-text-2 arabic">` +
             titleAr +
             `</h3>
                 </div>
@@ -95,7 +95,10 @@ function loadLeftSurahList(button) {
     leftSurahList.innerHTML = leftSurahItem;
 
 
-    document.getElementById(button).style.backgroundColor = '#dddddd50'
+    document.getElementById(button).style.backgroundColor = `var(--main-bg)`;
+
+    document.getElementById(button).style.border = `1px solid var(--main-content)`;
+
 
 
 
@@ -117,11 +120,11 @@ function loadThemeSettings() {
         themeInnerCode =
             themeInnerCode +
             `
-    <div id="`+themeName+`" class="themeItem  themeContent" style=" background-color:`+bg+`; ">
+    <div id="`+ themeName + `" class="themeItem  themeContent" style=" background-color:` + bg + `; ">
     <p  class="themeContent"
-    style="color:`+text+`;">eFortsHub</p> 
+    style="color:`+ text + `;">eFortsHub</p> 
     <p id="btnTh" class="themeContent"
-    style="color:`+text2+`;background-color:`+content+`;">Button</p>
+    style="color:`+ text2 + `;background-color:` + content + `;">Button</p>
 </div>`;
     }
 
@@ -162,22 +165,25 @@ function loadSurahsIndexClickListener(indexes, selectedTranscript) {
                 fetch('./api/surah/' + selectedTranscript + '/' + index + '.json')
                     .then((response) => response.json())
                     .then((data) => {
+
                         const sura = data.sura;
                         const content = data.content;
 
                         let surahInnerCode = '';
-
                         content.forEach(element => {
 
                             const id = element.id;
                             const verse_key = element.verse_key;
                             const verse = verse_key.replace(sura + ':', '');
-                            const text = element.text;
+                            let text = element.text;
 
 
+
+                            text = getTajweedFilteredText(text);
+                        
                             surahInnerCode = surahInnerCode +
                                 `
-                                <div class="ayah  container">
+                                <div id="`+ id + `" class="ayah  container">
                                     <div class="flex-ayah-icon">
                                         <div class="first ">
                                             <div class="time main-text-2 main-content half-round ">
@@ -195,7 +201,7 @@ function loadSurahsIndexClickListener(indexes, selectedTranscript) {
                                     </div>    
                                     <div class="ayah-content">
                                         <div class="arabic-ayah" >
-                                            <font class="main-text">`+ text + `</font>
+                                            <font class="main-text arabic">`+ text + `</font>
                                         </div>
                                             <br>   
                                         <font class="main-text">No translation available</font>
@@ -208,6 +214,7 @@ function loadSurahsIndexClickListener(indexes, selectedTranscript) {
                         });
 
                         quranList.innerHTML = surahInnerCode;
+
 
                         currentIndex = sura;
                         currentSurah = surahJsonArray[sura - 1];
@@ -229,9 +236,10 @@ function loadSurahsIndexClickListener(indexes, selectedTranscript) {
 
                         loadLeftSurahList(button);
                         loadSurahsIndexClickListener(indexes, selectedTranscript);
-                       // loadMainTheme();
+                        hideLoadingInUI();
+                        loadRightClickContextMenu(sura, content);
 
-                        
+
 
                     })
 
@@ -244,27 +252,103 @@ function loadSurahsIndexClickListener(indexes, selectedTranscript) {
 
 }
 
-function setLoadingInUI() {
-    quranList.innerHTML = `Loading...`;
-}
+// const loader = document.querySelector(".loader-bg");
 
+// window.addEventListener("load", function(){
+//     setTimeout(() => {
+//       loader.style.display = "none"
+//     }, 1000);
+//   })
+
+
+
+
+
+function setLoadingInUI() {
+       document.getElementById("ayah-context-menu").style.visibility = 'hidden';
+
+    var loader = document.getElementById("loader-bg");
+    loader.style.visibility = 'visible';
+
+ }
+
+
+function hideLoadingInUI() {
+    var loader = document.getElementById("loader-bg");
+    loader.style.visibility = 'hidden';
+}
 
 function initDefaultSettings() {
     loadMainTheme();
 
+}
+
+function loadRightClickContextMenu(sura, content) {
+   
+    content.forEach(element => {
+
+        const id = element.id;
+        const verse_key = element.verse_key;
+        const verse = verse_key.replace(sura + ':', '');
+        const text = element.text;
+
+        const view = document.getElementById(id);
+
+        view.addEventListener('contextmenu', function () {
+
+            console.log('right clicked haha ');
+            document.getElementById("ayah-context-menu").style.visibility = 'visible';
+
+            const event = window.event;
+            document.getElementById("ayah-context-menu").style.top = mouseY(event) + 'px';
+            document.getElementById("ayah-context-menu").style.left = mouseX(event) + 'px';
+        
+          //  alert(mouseX(event)+'px ,   '+mouseY(event)+'px ');
 
 
+        });
+     
+
+
+
+    });
+
+
+
+}
+function mouseX(evt) {
+    if (evt.pageX) {
+        return evt.pageX;
+    } else if (evt.clientX) {
+        return evt.clientX + (document.documentElement.scrollLeft ?
+            document.documentElement.scrollLeft :
+            document.body.scrollLeft);
+    } else {
+        return null;
+    }
+}
+
+function mouseY(evt) {
+    if (evt.pageY) {
+        return evt.pageY;
+    } else if (evt.clientY) {
+        return evt.clientY + (document.documentElement.scrollTop ?
+            document.documentElement.scrollTop :
+            document.body.scrollTop);
+    } else {
+        return null;
+    }
 }
 
 function loadMainTheme() {
 
-        document.documentElement.style.setProperty("--main-bg", mainTheme['bg']);
-        document.documentElement.style.setProperty("--main-content", mainTheme['content']);
-        document.documentElement.style.setProperty("--main-text", mainTheme['text']);
-        document.documentElement.style.setProperty("--main-text-2", mainTheme['text-2']);
+    document.documentElement.style.setProperty("--main-bg", mainTheme['bg']);
+    document.documentElement.style.setProperty("--main-content", mainTheme['content']);
+    document.documentElement.style.setProperty("--main-text", mainTheme['text']);
+    document.documentElement.style.setProperty("--main-text-2", mainTheme['text-2']);
 
-        usersTheme = mainTheme;
-    
+    usersTheme = mainTheme;
+
 
 
 
