@@ -1,0 +1,107 @@
+#forTajweed {
+  width: 100%;
+  padding: 8px;
+  transition: none;
+}
+
+#tajweed-checkbox {
+  display: none;
+  transition: none;
+}
+#tajweed-show {
+  display: none;
+  transition: none;
+}
+#tajweed-hide {
+  display: block;
+  transition: none;
+}
+#tajweed-checkbox:checked ~ label #tajweed-show {
+  display: block;
+}
+#tajweed-checkbox:checked ~ label #tajweed-hide {
+  display: none;
+}
+
+/* font arabic checkbox  */
+
+#font-arabic-checkbox {
+  display: none;
+  transition: none;
+}
+#font-arabic-open {
+    border-radius: 8px;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  height: max-content;
+  justify-content: space-between;
+  background-color: var(--main-content);
+  border: 1px solid var(--main-text);
+  transition: none;
+}
+#font-arabic-close {
+    border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: max-content;
+  justify-content: space-between;
+
+  transition: none;
+}
+#font-arabic-checkbox:checked ~ label #font-arabic-open {
+  display: flex;
+}
+#font-arabic-checkbox:checked ~ label #font-arabic-close {
+  display: none;
+}
+
+#font-translation-checkbox {
+  display: none;
+}
+
+#font-translation-open {
+    border-radius: 8px;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  height: max-content;
+  justify-content: space-between;
+  background-color: var(--main-content);
+  border: 1px solid var(--main-text);
+}
+#font-translation-close{
+    border-radius: 8px;
+    display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#font-translation-checkbox:checked ~ label #font-translation-open {
+  display: flex;
+}
+#font-translation-checkbox:checked ~ label #font-translation-close {
+  display: none;
+}
+
+#lang-trans-language:hover{
+    background-color: var(--main-content);
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid var(--main-text);
+
+}
+
+
+#lang-trans-translation:hover{
+    background-color: var(--main-content);
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid var(--main-text);
+
+}
+
+
+

@@ -37,7 +37,7 @@ function loadSurahListCenter() {
             `</p>
                         </div>
                     </div>
-                    <h3 class="main-text-2 arabic-font">` +
+                    <h3 class="main-text-2 arabic">` +
             titleAr +
             `</h3>
                 </div>
@@ -84,7 +84,7 @@ function loadLeftSurahList(button) {
             `</p>
                         </div>
                     </div>
-                    <h3 class="main-text-2">` +
+                    <h3 class="main-text-2 arabic">` +
             titleAr +
             `</h3>
                 </div>
@@ -201,7 +201,7 @@ function loadSurahsIndexClickListener(indexes, selectedTranscript) {
                                     </div>    
                                     <div class="ayah-content">
                                         <div class="arabic-ayah" >
-                                            <font class="main-text arabic-font">`+ text + `</font>
+                                            <font class="main-text arabic">`+ text + `</font>
                                         </div>
                                             <br>   
                                         <font class="main-text">No translation available</font>

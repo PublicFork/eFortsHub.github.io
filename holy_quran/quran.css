@@ -37,11 +37,22 @@ html {
   --main-content: #195f70;
   --main-text: white;
   --main-text-2: rgb(122, 218, 235);
+
   --arabic-font: kitab;
+  --arabic-font-size: 20px;
+  --arabic-font-style: normal;
+  --arabic-font-weight: normal;
+
 }
 
-.arabic-font {
+.arabic {
   font-family: var(--arabic-font);
+  font-size: var(--arabic-font-size);
+  font-weight: var(--arabic-font-weight);
+  font-style: var(--arabic-font-style);
+  direction: rtl;
+
+
 }
 
 .main-bg {
@@ -234,7 +245,6 @@ a:hover {
   align-content: flex-start;
   padding: 0;
 }
-
 
 #ayah-context-menu ul li {
   text-align: start;
