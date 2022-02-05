@@ -346,7 +346,7 @@
                     <!-- left header wrapper end -->
 
                     <div class="right-header-wrapper">
-                        <input type="checkbox"  id="setting-checkbox" />
+                        <input type="checkbox" checked id="setting-checkbox" />
 
                         <label for="setting-checkbox">
                             <i class="fa fa-cog main-bg main-text-2" id="setting-open"></i>
@@ -370,7 +370,7 @@
                                     <!-- Themes Button will be listed here.... -->
                                 </div>
                                 <div id="forTajweed">
-                                    <input type="checkbox" id="tajweed-checkbox" />
+                                    <input type="checkbox" id="tajweed-checkbox" checked />
 
                                     <label for="tajweed-checkbox" style="width: 100%; cursor: pointer; ">
                                         <div style="
@@ -421,10 +421,12 @@
                                 <li id="fonts">
                                     <a href="#fonts" class="main-text-2">Fonts</a>
                                 </li>
+
                                 <div>
                                     <input type="checkbox" id="font-arabic-checkbox" />
 
-                                    <label style="width: 100%; cursor: pointer" for="font-arabic-checkbox">
+                                    <label style="width: 100%; height: max-content; padding: 0; cursor: pointer"
+                                        for="font-arabic-checkbox">
                                         <div class="main-text" id="font-arabic-open">
                                             <div style="
                             display: flex;
@@ -481,13 +483,88 @@
                                             <i class="fa fa-angle-down"></i>
                                         </div>
                                     </label>
+
+                                    <div id="font-arabic-options" class="column">
+
+
+                                        <b class="main-text-2">Script</b>
+
+                                        <div class="row horizontal-scroll"
+                                            style="justify-items: start; justify-content: space-between; align-content:space-between;overflow-y: scroll;width: 100%; margin:auto; padding: auto;">
+
+                                            <div class="row m4">
+
+                                                <input class="none" type="radio" name="script" id="radio-imlaei">
+
+                                                <label for="radio-imlaei" class="main-text p8">
+                                                    <div id="imlaei-checked" class="row center chip">
+                                                        <i class="fa fa-check"></i>
+
+                                                        <b class="p8">Imlaei</b>
+                                                    </div>
+                                                    <div id="imlaei-uncheck" class="row center chip">
+                                                        <b class="p8">Imlaei</b>
+                                                    </div>
+                                                </label>
+
+                                            </div>
+
+                                            <div class="row m4">
+
+                                                <input class="none" type="radio" name="script" id="radio-indopak">
+
+                                                <label for="radio-indopak" class="main-text p8">
+                                                    <div id="indopak-checked" class="row center chip">
+                                                        <i class="fa fa-check"></i>
+                                                        <b class="p8">Indopak</b>
+                                                    </div>
+                                                    <div id="indopak-uncheck" class="row center chip">
+                                                        <b class="p8">Indopak</b>
+                                                    </div>
+                                                </label>
+
+                                            </div>
+
+                                            <div class="row m4">
+
+                                                <input class="none" type="radio" name="script" id="radio-uthmani">
+
+                                                <label for="radio-uthmani" class="main-text p8">
+                                                    <div id="uthmani-checked" class="row center chip">
+                                                        <i class="fa fa-check"></i>
+                                                        <b class="p8">Uthmani</b>
+                                                    </div>
+                                                    <div id="uthmani-uncheck" class="row center chip">
+                                                        <b class="p8">Uthmani</b>
+                                                    </div>
+                                                </label>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+
                                 </div>
+
+
+
+
+
+
+
+                                <!-- menu font arabic end here -->
+
+
+
 
                                 <div>
                                     <input type="checkbox" id="font-translation-checkbox" />
 
                                     <label style="width: 100%; cursor: pointer" for="font-translation-checkbox">
-                                        <div class="main-text" id="font-translation-open" >
+                                        <div class="main-text" id="font-translation-open">
                                             <div style="
                             display: flex;
                             flex-direction: row;
@@ -655,7 +732,7 @@
 
             <h1 class="text-center main-text-2">Bismillahir Rahmanir Rahim</h1>
 
-            <div id="quran_list" class="row whole-item-wraper">
+            <div id="quran_list" class="whole-item-wraper">
                 <!-- Surah or Ayah will be listed here -->
             </div>
         </div>
