@@ -51,7 +51,7 @@
 #font-arabic-options {
   padding: 8px;
   border: 1px solid var(--main-content);
-  display: flex;
+  display: none;
 }
 
 #font-arabic-checkbox:checked ~ label #font-arabic-open {

@@ -1,35 +1,35 @@
 @font-face {
   font-family: noorehidayat;
-  src: url("/fonts/arabic/noorehidayat.ttf");
+  src: url("fonts/arabic/noorehidayat.ttf");
 }
 @font-face {
   font-family: al_qalam_quran_majed;
-  src: url("/fonts/arabic/al_qalam_quran_majed.ttf");
+  src: url("fonts/arabic/al_qalam_quran_majed.ttf");
 }
 
 @font-face {
   font-family: ar_othmani;
-  src: url("/fonts/arabic/ar_othmani.ttf");
+  src: url("fonts/arabic/ar_othmani.ttf");
 }
 
 @font-face {
   font-family: excelent_arabic_web;
-  src: url("/fonts/arabic/excelent_arabic_web.ttf");
+  src: url("fonts/arabic/excelent_arabic_web.ttf");
 }
 
 @font-face {
   font-family: kitab;
-  src: url("/fonts/arabic/kitab.ttf");
+  src: url("fonts/arabic/kitab.ttf");
 }
 
 @font-face {
   font-family: noorehuda;
-  src: url("/fonts/arabic/noorehuda.ttf");
+  src: url("fonts/arabic/noorehuda.ttf");
 }
 
 @font-face {
   font-family: noorehira;
-  src: url("/fonts/arabic/noorehira.ttf");
+  src: url("fonts/arabic/noorehira.ttf");
 }
 
 html {
@@ -37,12 +37,10 @@ html {
   --main-content: #195f70;
   --main-text: white;
   --main-text-2: rgb(122, 218, 235);
-
   --arabic-font: kitab;
-  --arabic-font-size: 20px;
+  --arabic-font-size: 24px;
   --arabic-font-style: normal;
   --arabic-font-weight: normal;
-
 }
 
 .arabic {
@@ -51,8 +49,6 @@ html {
   font-weight: var(--arabic-font-weight);
   font-style: var(--arabic-font-style);
   direction: rtl;
-
-
 }
 
 .main-bg {
