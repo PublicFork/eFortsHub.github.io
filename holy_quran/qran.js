@@ -21,6 +21,7 @@ let indexes = [];
 
 
 
+
 loadThemeSettings();
 fetch("./api/surah.json")
   .then((response) => response.json())
