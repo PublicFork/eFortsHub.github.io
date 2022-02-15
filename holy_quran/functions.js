@@ -166,8 +166,8 @@ function loadSurahsIndexClickListener(indexes, selectedTranscript) {
                     .then((response) => response.json())
                     .then((data) => {
 
-                        const sura = data.sura;
-                        const content = data.content;
+                        const sura = data.surah;
+                        const content = data.verses;
 
                         let surahInnerCode = '';
                         content.forEach(element => {
@@ -180,7 +180,7 @@ function loadSurahsIndexClickListener(indexes, selectedTranscript) {
 
 
                             text = getTajweedFilteredText(text);
-                        
+
                             surahInnerCode = surahInnerCode +
                                 `
                                 <div id="`+ id + `" class="ayah  container">
@@ -265,12 +265,12 @@ function loadSurahsIndexClickListener(indexes, selectedTranscript) {
 
 
 function setLoadingInUI() {
-       document.getElementById("ayah-context-menu").style.visibility = 'hidden';
+    document.getElementById("ayah-context-menu").style.visibility = 'hidden';
 
     var loader = document.getElementById("loader-bg");
     loader.style.visibility = 'visible';
 
- }
+}
 
 
 function hideLoadingInUI() {
@@ -284,7 +284,7 @@ function initDefaultSettings() {
 }
 
 function loadRightClickContextMenu(sura, content) {
-   
+
     content.forEach(element => {
 
         const id = element.id;
@@ -302,12 +302,12 @@ function loadRightClickContextMenu(sura, content) {
             const event = window.event;
             document.getElementById("ayah-context-menu").style.top = mouseY(event) + 'px';
             document.getElementById("ayah-context-menu").style.left = mouseX(event) + 'px';
-        
-          //  alert(mouseX(event)+'px ,   '+mouseY(event)+'px ');
+
+            //  alert(mouseX(event)+'px ,   '+mouseY(event)+'px ');
 
 
         });
-     
+
 
 
 

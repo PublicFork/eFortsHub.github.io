@@ -13,7 +13,7 @@ const bismillahText = "﷽";
 
 
 let surahJsonArray = "";
-let selectedTranscript = 'imlaei';
+let selectedTranscript = 'indopak';
 let currentSurah = '';
 let currentIndex;
 let indexes = [];
